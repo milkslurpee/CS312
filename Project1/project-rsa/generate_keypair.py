@@ -41,7 +41,9 @@ def generate_key_pairs(n_bits) -> tuple[int, int, int]:
     Computes N = p*q
     Computes e and d such that e*d = 1 mod (p-1)(q-1)
     Return N, e, and d
+    test git
     """
+
     p = generate_large_prime(n_bits)
     q = generate_large_prime(n_bits)
     if p == q or p == None or q == None:
