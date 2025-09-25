@@ -7,18 +7,15 @@ import math
 
 # You will need to implement this function and change the return value.
 def mod_exp(x: int, y: int, N: int) -> int:
-    if y == 0:
-        return 1
+    if y == 0: return 1
     z = mod_exp(x, y // 2, N)
-    if y % 2 == 0:
-        return (z ** 2) % N
-    else:
-        return (x * (z ** 2)) % N
+    if y % 2 == 0: return (z ** 2) % N
+    else: return (x * (z ** 2)) % N
 
 
 def fermat(N: int, k: int) -> bool:
+    if N == 2 or N == 3: return True
     if N <= 1 or N % 2 == 0 or N % 3 == 0: return False
-
     for j in range(1, k + 1):
         a = random.randint(1, N - 1)
         if mod_exp(a, N - 1, N) != 1: return False
