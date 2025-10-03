@@ -285,12 +285,19 @@ only requires storing nodes. So O(|V| + |E|) dominates.
 
 ### Comparison of Theoretical and Empirical Results
 
-- Theoretical order of growth: O(|V| + |E|)
+- Theoretical order of growth: O(|V|log(|V|) + |E|)
 - Empirical order of growth (if different from theoretical): 
 
 ![img](Figure_2.png)
 
-*Fill me in*
+![svg](OGSCCanalysis/empirical.svg)
+
+Adjusted Plot: O(|V|log(|V|) + |E|) / 25000
+
+![svg](SCCanalysis/empirical.svg)
+
+The empirical order of growth was about 25 thousand times slower than our theoretical estimate. We, again, assume the reason
+is simply because of how fast modern computers are, and how efficient the python interpreter is. It's hard to account for this drastic of a difference by simply evaluating the code.
 
 ## Stretch 1
 

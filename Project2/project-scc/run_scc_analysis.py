@@ -85,9 +85,9 @@ def main():
                     size,
                     density_factor,
                     # Pass in either prepost
-                    prepost,
+                    # prepost,
                     # or find_sccs
-                     #find_sccs
+                    find_sccs
                     # for the analysis you want to run on the graph
                 )
                 runtimes.append((density_factor, size, v, e, runtime))

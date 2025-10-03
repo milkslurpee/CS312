@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="finished coding core">
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="theoretical analysis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project2/project-scc/OGanalysis/empirical.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/OGanalysis/empirical.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project2/project-scc/_analysis/empirical.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/_analysis/empirical.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project2/project-scc/_runtimes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/_runtimes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project2/project-scc/plot_empirical_theoretical_compared.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/plot_empirical_theoretical_compared.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project2/project-scc/run_scc_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/run_scc_analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project2/project-scc/scc-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/scc-project-report.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project2/project-scc/scc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/scc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project2/project-scc/test_scc_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/test_scc_results.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,9 +180,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.plot_empirical_theoretical_compared" />
+        <item itemvalue="Python.compute_coefficient" />
         <item itemvalue="Python.run_scc_analysis" />
         <item itemvalue="Python tests.Python tests in test_scc.py" />
-        <item itemvalue="Python.compute_coefficient" />
         <item itemvalue="Python tests.Python tests in test_rsa.py" />
       </list>
     </recent_temporary>
@@ -293,7 +290,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759492656283</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="theoretical analysis">
+      <option name="closed" value="true" />
+      <created>1759494293167</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1759494293167</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -318,6 +323,7 @@
     <MESSAGE value="passed baseline and got empirical data" />
     <MESSAGE value="added figure 1" />
     <MESSAGE value="finished coding core" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished coding core" />
+    <MESSAGE value="theoretical analysis" />
+    <option name="LAST_COMMIT_MESSAGE" value="theoretical analysis" />
   </component>
 </project>
