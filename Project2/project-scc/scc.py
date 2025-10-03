@@ -30,13 +30,53 @@ def explore(node, graph: GRAPH, visited, order, tree):
     tree[node] = [preorder, postorder]
 
 
+def exploreSCCs(node, graph: GRAPH, visited, scc):
+    visited.add(node)
+    scc.add(node)
+    for edge in graph[node]:
+        if edge not in visited:
+            exploreSCCs(edge, graph, visited, scc)
+
+
 def find_sccs(graph: GRAPH) -> list[set[str]]:
     """
     Return a list of the strongly connected components in the graph.
     The list should be returned in order of sink-to-source
     """
-    return []
+    reverseGraph = reverse_graph(graph)
+    reverseOrder = prepost(reverseGraph)
+    postOrder = {}
+    for dictionary in reverseOrder:
+        for key, value in dictionary.items():
+            postOrder[key] = value[1]
+    dictionaryValues = postOrder.items()
+    sortedDictionary = sorted(dictionaryValues, key=lambda x: x[1], reverse=True)
+    sortedNodes = []
 
+    for key, value in sortedDictionary:
+        sortedNodes.append(key)
+
+    SCCs = []
+    visited = set()
+    for node in sortedNodes:
+        if node not in visited:
+            scc = set()
+            exploreSCCs(node, graph, visited, scc)
+            SCCs.append(scc)
+    return SCCs
+
+
+def reverse_graph(graph: GRAPH) -> GRAPH:
+    reversed_graph = {}
+    for node in graph:
+        for edge in graph[node]:
+            if(edge not in reversed_graph):
+                reversed_graph[edge] = []
+            reversed_graph[edge].append(node)
+    for node in graph:
+        if node not in reversed_graph:
+            reversed_graph[node] = []
+    return reversed_graph
 
 def classify_edges(graph: GRAPH, trees: list[dict[str, list[int]]]) -> dict[str, set[tuple[str, str]]]:
     """
