@@ -286,7 +286,7 @@ only requires storing nodes. So O(|V| + |E|) dominates.
 ### Comparison of Theoretical and Empirical Results
 
 - Theoretical order of growth: O(|V|log(|V|) + |E|)
-- Empirical order of growth (if different from theoretical): 
+- Empirical order of growth (if different from theoretical): O(|V|log(|V|) + |E|) / 25000
 
 ![img](Figure_2.png)
 
@@ -325,4 +325,7 @@ is simply because of how fast modern computers are, and how efficient the python
 
 ## Project Review
 
-*Fill me in*
+I worked on this project with my little brother Luke. Luke's and my code ended up looking pretty 
+similar, but we split it up in different ways. The biggest difference we saw was that I liked to 
+use a set to store "visited" nodes, and check if nodes were in the set. Luke created a dictionary 
+for each node, and used it to store a boolean called "visited". Our runtimes were nearly identical.
