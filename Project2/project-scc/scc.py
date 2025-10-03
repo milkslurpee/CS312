@@ -39,10 +39,6 @@ def exploreSCCs(node, graph: GRAPH, visited, scc):
 
 
 def find_sccs(graph: GRAPH) -> list[set[str]]:
-    """
-    Return a list of the strongly connected components in the graph.
-    The list should be returned in order of sink-to-source
-    """
     reverseGraph = reverse_graph(graph)
     reverseOrder = prepost(reverseGraph)
     postOrder = {}

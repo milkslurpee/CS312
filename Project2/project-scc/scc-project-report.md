@@ -32,7 +32,7 @@ def explore(node, graph: GRAPH, visited, order, tree):
     visited.add(node)
     order[0] += 1
     preorder = order[0]
-    for edge in graph[node]:                                    # O(|E|) we explore all edges of graph, visiting nodes which haven't been visited yet
+    for edge in graph[node]:                                    # O(|V| + |E|) we explore all edges of graph, visiting nodes which haven't been visited yet
         if edge not in visited:
             explore(edge, graph, visited, order, tree)
     order[0] += 1
@@ -40,7 +40,7 @@ def explore(node, graph: GRAPH, visited, order, tree):
     tree[node] = [preorder, postorder]
 ```
 
-The time complexity of Prepost is O(|V|+|E|). Even though explore, which has O(|E|), is called inside a 
+The Time complexity of Prepost is O(|V|+|E|). Even though explore, which has O(|E|), is called inside a 
 for-loop which iterates through all nodes, the explore function also visits nodes, marking them visited, so
 they aren't visited by the outer for-loop. The loop is only there to catch nodes that are completely
 isolated from others.
@@ -152,13 +152,89 @@ Discussion points
 ### Theoretical Analysis - SCC
 
 #### Time 
+```py
+def find_sccs(graph: GRAPH) -> list[set[str]]:
+    reverseGraph = reverse_graph(graph)             # O(|V| + |E|)
+    reverseOrder = prepost(reverseGraph)            # O(|V| + |E|) From above in baseline section
+    postOrder = {}
+    for dictionary in reverseOrder:                 # O(|V|) Iterate through all nodes, saving the postorder value
+        for key, value in dictionary.items():
+            postOrder[key] = value[1]
+    dictionaryValues = postOrder.items()
+    sortedDictionary = sorted(dictionaryValues, key=lambda x: x[1], reverse=True)       # O(|V| * log(|V|)) The time complexity for the sort algorithm
+    sortedNodes = []
 
-*Fill me in*
+    for key, value in sortedDictionary:             
+        sortedNodes.append(key)
+
+    SCCs = []
+    visited = set()
+    for node in sortedNodes:                        # O(|V|)
+        if node not in visited:
+            scc = set()
+            exploreSCCs(node, graph, visited, scc)  # O(|V| + |E|)
+            SCCs.append(scc)
+    return SCCs
+
+
+def reverse_graph(graph: GRAPH) -> GRAPH:
+    reversed_graph = {}
+    for node in graph:                            # O(|V| + |E|) Iterate through all nodes and edges, reversing the edges
+        for edge in graph[node]:
+            if(edge not in reversed_graph):
+                reversed_graph[edge] = []
+            reversed_graph[edge].append(node)
+    for node in graph:
+        if node not in reversed_graph:
+            reversed_graph[node] = []
+    return reversed_graph
+```
+The Time complexity of find_sccs is O(|V|log(|V|) + |E|). We must iterate through all of the nodes and edges each time we traverse the graph. However,
+we also sort the nodes by their postorder which takes O(|V|log(|V|)) time. |V|log(|V|) dominates |V|, so we are left with
+O(|V|log(|V|) + |E|).
 
 #### Space
 
-*Fill me in*
+```py
+def find_sccs(graph: GRAPH) -> list[set[str]]:
+    reverseGraph = reverse_graph(graph)             # O(|V| + |E|)
+    reverseOrder = prepost(reverseGraph)            # O(|V|) From above in baseline
+    postOrder = {}
+    for dictionary in reverseOrder:                 
+        for key, value in dictionary.items():       # O(|V|) Iterate through all nodes
+            postOrder[key] = value[1]
+    dictionaryValues = postOrder.items()            # O(|V|) Save all nodes with postorder value
+    sortedDictionary = sorted(dictionaryValues, key=lambda x: x[1], reverse=True)       # O(n) Sort all nodes
+    sortedNodes = []
 
+    for key, value in sortedDictionary:             # O(|V|) iterate through all nodes
+        sortedNodes.append(key)
+
+    SCCs = []
+    visited = set()
+    for node in sortedNodes:                        # O(|V|) iterate through nodes, created sets of sccs
+        if node not in visited:
+            scc = set()
+            exploreSCCs(node, graph, visited, scc)  
+            SCCs.append(scc)
+    return SCCs
+
+
+def reverse_graph(graph: GRAPH) -> GRAPH:
+    reversed_graph = {}
+    for node in graph:                              # O(|V| + |E|) to make a new, reverse graph, we have to store all nodes and edges
+        for edge in graph[node]:
+            if(edge not in reversed_graph):
+                reversed_graph[edge] = []
+            reversed_graph[edge].append(node)
+    for node in graph:
+        if node not in reversed_graph:
+            reversed_graph[node] = []
+    return reversed_graph
+```
+
+The Space complexity is O(|V| + |E|). In order to reverse the graph, we have to store both all the nodes and edges. Everything else
+only requires storing nodes. So O(|V| + |E|) dominates.
 ### Empirical Data
 
 
@@ -209,7 +285,7 @@ Discussion points
 
 ### Comparison of Theoretical and Empirical Results
 
-- Theoretical order of growth: *copy from section above* 
+- Theoretical order of growth: O(|V| + |E|)
 - Empirical order of growth (if different from theoretical): 
 
 ![img](Figure_2.png)

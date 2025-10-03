@@ -7,7 +7,7 @@ from _runtimes import runtimes
 def main():
     # Define this
     def theoretical_big_o(v, e):
-        return (v + e)/10000
+        return (v + e) / 10000
 
     # Fill in from result using compute_coefficient
     coeff = 0.0012186330557
@@ -39,7 +39,7 @@ def main():
     )
 
     # Update title, legend, and axis labels as needed
-    ax.legend(['Observed', 'Theoretical O(1)'])
+    ax.legend(['Observed', 'Theoretical O(|V| + |E|) / 10000'])
     ax.set_xlabel('|V|')
     ax.set_ylabel('|E|')
     ax.set_zlabel('Runtime')

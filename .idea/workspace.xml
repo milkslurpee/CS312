@@ -6,7 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="finished coding core">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project2/project-scc_results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/project-scc/OGanalysis/empirical.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/OGanalysis/empirical.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/project-scc/_analysis/empirical.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/_analysis/empirical.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/project-scc/_runtimes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/_runtimes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/project-scc/plot_empirical_theoretical_compared.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/plot_empirical_theoretical_compared.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/project-scc/run_scc_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/run_scc_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/project-scc/scc-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/scc-project-report.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/project-scc/scc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/scc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/project-scc/test_scc_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/test_scc_results.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,10 +32,7 @@
     <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;milkslurpee&quot;
-  }
+  &quot;lastFilter&quot;: {}
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
@@ -79,7 +83,7 @@
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_scc.py">
+  <component name="RunManager" selected="Python.plot_empirical_theoretical_compared">
     <configuration name="compute_coefficient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
@@ -178,10 +182,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_scc.py" />
         <item itemvalue="Python.plot_empirical_theoretical_compared" />
-        <item itemvalue="Python.compute_coefficient" />
         <item itemvalue="Python.run_scc_analysis" />
+        <item itemvalue="Python tests.Python tests in test_scc.py" />
+        <item itemvalue="Python.compute_coefficient" />
         <item itemvalue="Python tests.Python tests in test_rsa.py" />
       </list>
     </recent_temporary>
@@ -281,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759485525779</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="finished coding core">
+      <option name="closed" value="true" />
+      <created>1759492656283</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1759492656283</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
