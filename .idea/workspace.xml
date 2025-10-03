@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="test git">
-      <change afterPath="$PROJECT_DIR$/Project1/project-rsa/benchmark2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1/project-rsa/encryptspeed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/project-rsa/generate_keypair.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/project-rsa/generate_keypair.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/project-rsa/prime_number_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/project-rsa/prime_number_generation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/project-rsa/rsa-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/project-rsa/rsa-project-report.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/project-rsa/test_rsa_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/project-rsa/test_rsa_results.html" afterDir="false" />
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="finished project 1 w/ report">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +56,12 @@
     &quot;Python.test_rsa.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.encryptspeed">
+  <component name="RunManager" selected="Python tests.Python tests for test_scc.test_prepost">
     <configuration name="benchmark" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
@@ -132,7 +128,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_rsa.test_composites_miller_rabin" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_scc.test_prepost" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -143,7 +139,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_rsa.test_composites_miller_rabin&quot;" />
+      <option name="_new_target" value="&quot;test_scc.test_prepost&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -164,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_scc.test_prepost" />
         <item itemvalue="Python.encryptspeed" />
         <item itemvalue="Python.benchmark" />
         <item itemvalue="Python.benchmark2" />
         <item itemvalue="Python tests.Python tests in test_rsa.py" />
-        <item itemvalue="Python tests.Python tests for test_rsa.test_composites_miller_rabin" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +215,23 @@
       <option name="project" value="LOCAL" />
       <updated>1758735060603</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="finished project 1 w/ report">
+      <option name="closed" value="true" />
+      <created>1758779807259</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1758779807259</updated>
+    </task>
+    <task id="LOCAL-00006" summary="finished project 1 w/ report">
+      <option name="closed" value="true" />
+      <created>1758779827859</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1758779827859</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,6 +251,7 @@
     </ignored-roots>
     <MESSAGE value="project 1" />
     <MESSAGE value="test git" />
-    <option name="LAST_COMMIT_MESSAGE" value="test git" />
+    <MESSAGE value="finished project 1 w/ report" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished project 1 w/ report" />
   </component>
 </project>
