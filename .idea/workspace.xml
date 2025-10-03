@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="added project 2 (scc) to repository">
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="passed baseline and got empirical data">
+      <change beforePath="$PROJECT_DIR$/.idea/CS312.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS312.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project2/project-scc/scc-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/scc-project-report.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project2/project-scc/scc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/scc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project1/project-rsa/test_rsa_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/project-rsa/test_rsa_results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/project-scc/_runtimes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/_runtimes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/project-scc/test_scc_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/project-scc/test_scc_results.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,23 +54,26 @@
     "Python tests.Python tests for test_rsa.test_composites_miller_rabin.executor": "Run",
     "Python tests.Python tests for test_rsa.test_primes_fermat.executor": "Run",
     "Python tests.Python tests for test_scc.test_prepost.executor": "Run",
+    "Python tests.Python tests for test_scc.test_scc_2.executor": "Run",
     "Python tests.Python tests in project-scc.executor": "Run",
     "Python tests.Python tests in test_rsa.py.executor": "Run",
     "Python tests.Python tests in test_scc.py.executor": "Run",
     "Python.benchmark.executor": "Run",
     "Python.benchmark2.executor": "Run",
+    "Python.compute_coefficient.executor": "Run",
     "Python.encryptspeed.executor": "Run",
     "Python.run_scc_analysis.executor": "Run",
     "Python.test_rsa.executor": "Run",
+    "Python.test_scc.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.run_scc_analysis">
-    <configuration name="encryptspeed" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.compute_coefficient">
+    <configuration name="compute_coefficient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,11 +82,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project1/project-rsa" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project2/project-scc" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project1/project-rsa/encryptspeed.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project2/project-scc/compute_coefficient.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -112,7 +117,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_scc.test_prepost" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="test_scc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS312" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project2/project-scc" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project2/project-scc/test_scc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_rsa.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,22 +150,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_scc.test_prepost&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in project-scc" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="CS312" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project2/project-scc" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Project2/project-scc&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Project1/project-rsa/test_rsa.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -159,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.run_scc_analysis" />
-        <item itemvalue="Python tests.Python tests in project-scc" />
+        <item itemvalue="Python.compute_coefficient" />
+        <item itemvalue="Python tests.Python tests in test_rsa.py" />
         <item itemvalue="Python tests.Python tests in test_scc.py" />
-        <item itemvalue="Python tests.Python tests for test_scc.test_prepost" />
-        <item itemvalue="Python.encryptspeed" />
+        <item itemvalue="Python.test_scc" />
+        <item itemvalue="Python.run_scc_analysis" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759452028778</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="passed baseline and got empirical data">
+      <option name="closed" value="true" />
+      <created>1759465212999</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1759465212999</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -260,6 +280,7 @@
     <MESSAGE value="test git" />
     <MESSAGE value="finished project 1 w/ report" />
     <MESSAGE value="added project 2 (scc) to repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="added project 2 (scc) to repository" />
+    <MESSAGE value="passed baseline and got empirical data" />
+    <option name="LAST_COMMIT_MESSAGE" value="passed baseline and got empirical data" />
   </component>
 </project>

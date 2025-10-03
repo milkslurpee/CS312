@@ -125,7 +125,7 @@ and the number of nodes we must iterate through in the for-loop decreased.
 - Theoretical order of growth: O(|V|+|E|) 
 - Empirical order of growth (if different from theoretical): 
 
-![img](img.png)
+![img](Figure_1.png)
 
 *Fill me in*
 

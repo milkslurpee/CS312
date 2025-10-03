@@ -52,10 +52,6 @@
             font-size: 1em;
             font-weight: bold;
         }
-        .content-wrapper {
-            display: flex;
-            flex-direction: column;
-        }
         .test-result-passed, .test-result-failed {
             padding: 5px;
             border-radius: 5px;
@@ -93,26 +89,45 @@
             font-size: 1em;
             margin-right: 5px;
         }
+        ul.test-info {
+            list-style-type: none;
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        ul.test-info li {
+            margin: 6px 0;
+        }
+        ul.test-info li.fail {
+            color: #721c24;
+        }
+        ul.test-info li.pass {
+            color: #155724;
+        }
+        .blocked-message {
+            margin: 10px 20px;
+            padding: 10px;
+            font-style: italic;
+            color: #555;
+        }
+        pre.failure-output {
+            background: #fff0f0;
+            border: 1px solid #f5c6cb;
+            padding: 8px;
+            border-radius: 3px;
+            margin-top: 5px;
+            white-space: pre-wrap;
+        }
         .comparison-container {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             gap: 10px;
-            margin-bottom: 10px;
+            margin: 10px 0;
             padding: 0 10px;
-
-        }
-        @media (max-width: 1500px) {
-            .comparison-container {
-                flex-direction: column;
-            }
         }
         .section {
             flex: 1;
-            min-width: 400px;
-        }
-        .section strong {
-            font-size: 1em;
+            min-width: 300px;
         }
         .content {
             background: rgb(245, 245, 245);
@@ -121,15 +136,12 @@
             border-radius: 3px;
             overflow-x: auto;
         }
-        .test-info {
-            margin: 5px 10px;
-        }
     </style>
 </head>
 <body>
     <div class="page-container">
         <header>
-            <h1>Test Scc Results</h1>
+            <h1>test_scc Results</h1>
         </header>
         <main class="main-content">
             <div class="test-summary">
@@ -144,7 +156,7 @@
                         <h2>baseline</h2>
                         <div class="result-subheader">
                             <div class="status">
-                                <h2>Status:</h2> Passed
+                                <h2>Passed</h2>
                             </div>
                             <div class="score">
                                 <h2>Score:</h2> 0 / 0
@@ -152,13 +164,17 @@
                         </div>
                     </div>
                     
+                    <ul class="test-info">
                     
-                        <div class="comparison-container-empty"></div>
+                        
+                            <li class="pass">test_prepost — Pass</li>
+                        
                     
+                        
+                            <li class="pass">test_prepost_2 — Pass</li>
+                        
                     
-                    
-                        <div class="comparison-container-empty"></div>
-                    
+                    </ul>
                     
                 </div>
             </div>
@@ -169,7 +185,7 @@
                         <h2>core</h2>
                         <div class="result-subheader">
                             <div class="status">
-                                <h2>Status:</h2> Failed
+                                <h2>Failed</h2>
                             </div>
                             <div class="score">
                                 <h2>Score:</h2> 0 / 0
@@ -177,12 +193,12 @@
                         </div>
                     </div>
                     
+                    <ul class="test-info">
                     
-                    <div class="comparison-container">
-                        <div class="section">
-                            <p><strong>Output</strong></p>
-                            <div class="content">
-                                <pre>@core
+                        
+                            <li class="fail">test_scc — Fail</li>
+                            
+                                <pre class="failure-output">@core
     def test_scc():
         expected_sccs = [
             {'d', 'g', 'l', 'i', 'h'},
@@ -195,24 +211,20 @@
         sccs = find_sccs(graph1)
     
 >       assert sccs == expected_sccs
-E       AssertionError: assert [] == [{'d', 'g', 'l', 'h', 'i'}, {'e'}, {'c'}, {'a', 'b', 'f'}, {'j', 'k'}]
+E       AssertionError: assert [] == [{'h', 'l', 'i', 'g', 'd'}, {'e'}, {'c'}, {'a', 'f', 'b'}, {'j', 'k'}]
 E         Right contains 5 more items, first extra item: {'d', 'g', 'h', 'i', 'l'}
 E         Full diff:
-E         - [{'d', 'g', 'l', 'h', 'i'}, {'e'}, {'c'}, {'a', 'b', 'f'}, {'j', 'k'}]
+E         - [{'h', 'l', 'i', 'g', 'd'}, {'e'}, {'c'}, {'a', 'f', 'b'}, {'j', 'k'}]
 E         + []
 
 Project2\project-scc\test_scc.py:101: AssertionError</pre>
-                            </div>
-                        </div>
-                    </div>
+                            
+                        
                     
-                    
-                    
-                    <div class="comparison-container">
-                        <div class="section">
-                            <p><strong>Output</strong></p>
-                            <div class="content">
-                                <pre>@core
+                        
+                            <li class="fail">test_scc_2 — Fail</li>
+                            
+                                <pre class="failure-output">@core
     def test_scc_2():
         sccs = find_sccs(graph2)
         expected_sccs = [
@@ -223,17 +235,17 @@ Project2\project-scc\test_scc.py:101: AssertionError</pre>
         ]
     
 >       assert sccs == expected_sccs
-E       AssertionError: assert [] == [{'n07', 'n02', 'n08', 'n05', 'n06', 'n04', 'n03'}, {'n10'}, {'n09'}, {'n01'}]
+E       AssertionError: assert [] == [{'n05', 'n07', 'n02', 'n08', 'n04', 'n03', 'n06'}, {'n10'}, {'n09'}, {'n01'}]
 E         Right contains 4 more items, first extra item: {'n02', 'n03', 'n04', 'n05', 'n06', 'n07', ...}
 E         Full diff:
-E         - [{'n07', 'n02', 'n08', 'n05', 'n06', 'n04', 'n03'}, {'n10'}, {'n09'}, {'n01'}]
+E         - [{'n05', 'n07', 'n02', 'n08', 'n04', 'n03', 'n06'}, {'n10'}, {'n09'}, {'n01'}]
 E         + []
 
 Project2\project-scc\test_scc.py:114: AssertionError</pre>
-                            </div>
-                        </div>
-                    </div>
+                            
+                        
                     
+                    </ul>
                     
                 </div>
             </div>
@@ -244,7 +256,7 @@ Project2\project-scc\test_scc.py:114: AssertionError</pre>
                         <h2>stretch1</h2>
                         <div class="result-subheader">
                             <div class="status">
-                                <h2>Status:</h2> Failed
+                                <h2>Failed</h2>
                             </div>
                             <div class="score">
                                 <h2>Score:</h2> 0 / 0
@@ -252,16 +264,7 @@ Project2\project-scc\test_scc.py:114: AssertionError</pre>
                         </div>
                     </div>
                     
-                    
-                    <div class="comparison-container">
-                        <div class="section">
-                            <p><strong>Output</strong></p>
-                            <div class="content">
-                                <pre>Failed Prior Test Tiers. Please fix previous errors to receive a score for this test tier.</pre>
-                            </div>
-                        </div>
-                    </div>
-                    
+                        <div class="blocked-message">Tests for this tier will run when all prerequisite tiers have passed.</div>
                     
                 </div>
             </div>
@@ -269,7 +272,7 @@ Project2\project-scc\test_scc.py:114: AssertionError</pre>
             
         </main>
         <footer>
-            <p>Generated by byu_pytest_utils on October 02, 2025 09:38 PM</p>
+            <p>Generated by byu_pytest_utils on October 02, 2025 10:48 PM</p>
         </footer>
     </div>
 </body>

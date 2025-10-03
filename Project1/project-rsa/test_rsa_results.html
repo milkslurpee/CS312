@@ -52,10 +52,6 @@
             font-size: 1em;
             font-weight: bold;
         }
-        .content-wrapper {
-            display: flex;
-            flex-direction: column;
-        }
         .test-result-passed, .test-result-failed {
             padding: 5px;
             border-radius: 5px;
@@ -93,26 +89,45 @@
             font-size: 1em;
             margin-right: 5px;
         }
+        ul.test-info {
+            list-style-type: none;
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        ul.test-info li {
+            margin: 6px 0;
+        }
+        ul.test-info li.fail {
+            color: #721c24;
+        }
+        ul.test-info li.pass {
+            color: #155724;
+        }
+        .blocked-message {
+            margin: 10px 20px;
+            padding: 10px;
+            font-style: italic;
+            color: #555;
+        }
+        pre.failure-output {
+            background: #fff0f0;
+            border: 1px solid #f5c6cb;
+            padding: 8px;
+            border-radius: 3px;
+            margin-top: 5px;
+            white-space: pre-wrap;
+        }
         .comparison-container {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             gap: 10px;
-            margin-bottom: 10px;
+            margin: 10px 0;
             padding: 0 10px;
-
-        }
-        @media (max-width: 1500px) {
-            .comparison-container {
-                flex-direction: column;
-            }
         }
         .section {
             flex: 1;
-            min-width: 400px;
-        }
-        .section strong {
-            font-size: 1em;
+            min-width: 300px;
         }
         .content {
             background: rgb(245, 245, 245);
@@ -121,15 +136,12 @@
             border-radius: 3px;
             overflow-x: auto;
         }
-        .test-info {
-            margin: 5px 10px;
-        }
     </style>
 </head>
 <body>
     <div class="page-container">
         <header>
-            <h1>Test Rsa Results</h1>
+            <h1>test_rsa Results</h1>
         </header>
         <main class="main-content">
             <div class="test-summary">
@@ -144,7 +156,7 @@
                         <h2>baseline</h2>
                         <div class="result-subheader">
                             <div class="status">
-                                <h2>Status:</h2> Passed
+                                <h2>Passed</h2>
                             </div>
                             <div class="score">
                                 <h2>Score:</h2> 0 / 0
@@ -152,17 +164,21 @@
                         </div>
                     </div>
                     
+                    <ul class="test-info">
                     
-                        <div class="comparison-container-empty"></div>
+                        
+                            <li class="pass">test_mod_exp — Pass</li>
+                        
                     
+                        
+                            <li class="pass">test_primes_fermat — Pass</li>
+                        
                     
+                        
+                            <li class="pass">test_composites_fermat — Pass</li>
+                        
                     
-                        <div class="comparison-container-empty"></div>
-                    
-                    
-                    
-                        <div class="comparison-container-empty"></div>
-                    
+                    </ul>
                     
                 </div>
             </div>
@@ -173,7 +189,7 @@
                         <h2>core</h2>
                         <div class="result-subheader">
                             <div class="status">
-                                <h2>Status:</h2> Passed
+                                <h2>Passed</h2>
                             </div>
                             <div class="score">
                                 <h2>Score:</h2> 0 / 0
@@ -181,9 +197,13 @@
                         </div>
                     </div>
                     
+                    <ul class="test-info">
                     
-                        <div class="comparison-container-empty"></div>
+                        
+                            <li class="pass">test_key_pair_encoding_decoding — Pass</li>
+                        
                     
+                    </ul>
                     
                 </div>
             </div>
@@ -194,7 +214,7 @@
                         <h2>stretch2</h2>
                         <div class="result-subheader">
                             <div class="status">
-                                <h2>Status:</h2> Passed
+                                <h2>Passed</h2>
                             </div>
                             <div class="score">
                                 <h2>Score:</h2> 0 / 0
@@ -202,13 +222,17 @@
                         </div>
                     </div>
                     
+                    <ul class="test-info">
                     
-                        <div class="comparison-container-empty"></div>
+                        
+                            <li class="pass">test_primes_miller_rabin — Pass</li>
+                        
                     
+                        
+                            <li class="pass">test_composites_miller_rabin — Pass</li>
+                        
                     
-                    
-                        <div class="comparison-container-empty"></div>
-                    
+                    </ul>
                     
                 </div>
             </div>
@@ -216,7 +240,7 @@
             
         </main>
         <footer>
-            <p>Generated by byu_pytest_utils on September 24, 2025 03:55 PM</p>
+            <p>Generated by byu_pytest_utils on October 02, 2025 10:48 PM</p>
         </footer>
     </div>
 </body>
