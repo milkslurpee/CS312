@@ -75,7 +75,7 @@ def empirical_analysis(bit_lengths=[64, 128, 256, 512, 1024, 2048]):
         theoretical_scaled = [t * scale for t in theoretical]
 
         plt.plot(valid_bit_lengths, theoretical_scaled, marker='x',
-                 label='O(n³) theoretical estimate', linestyle=':', linewidth=2, markersize=8)
+                 label='O(k*n^4) theoretical estimate', linestyle=':', linewidth=2, markersize=8)
 
     # --------------------------
     # Empirical order of growth (slope in log-log space)

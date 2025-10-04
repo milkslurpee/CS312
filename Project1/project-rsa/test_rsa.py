@@ -4,7 +4,7 @@ import random
 from byu_pytest_utils import tier
 
 from prime_number_generation import mod_exp, fermat, miller_rabin
-from generate_keypair import generate_key_pairs
+from generate_keypair import generate_key_pairs, extended_euclid
 
 import sys
 sys.setrecursionlimit(4000)

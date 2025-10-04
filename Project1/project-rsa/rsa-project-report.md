@@ -20,46 +20,58 @@ original number.
 
 ### Theoretical Analysis - Prime Number Generation
 
-#### Time and Space
-
-```py
-def mod_exp(x: int, y: int, N: int) -> int:
-    if y == 0: return 1
-    z = mod_exp(x, y // 2, N)
-    if y % 2 == 0: return (z ** 2) % N
-    else: return (x * (z ** 2)) % N
-```
-The time complexity of mod_exp is O(n^3). The function is called recursively and splits the magnitude of the exponent in half each tine. This decrements the bit value by 1, so this 
-runs at O(n). The multiplication we do on each return step is O(n^2), so we end up with O(n^3).
-
-The Space complexity is O(n). Since the function cuts y in half each time, the bit size is decreased by one every recursive call. So the depth of the recursion is bound by the bit size n.
-
-```py
-def fermat(N: int, k: int) -> bool:
-    if N == 2 or N == 3: return True
-    if N <= 1 or N % 2 == 0 or N % 3 == 0: return False
-    for j in range(1, k + 1):
-        a = random.randint(1, N - 1)
-        if mod_exp(a, N - 1, N) != 1: return False
-    return True
-```
-The time complexity of Fermat's is O(k*n^3). We iterated k times, and run mod_exp which is O(n^3) on each iteration.
-
-The Space complexity is O(n), because it iteratively calls mod_exp, which is O(n) space complexity.
+#### Time
 
 ```py
 def generate_large_prime(n_bits: int) -> int:
     num = random.getrandbits(n_bits)
-    if fermat(num, 20) == False:
-        return generate_large_prime(n_bits)
+    if fermat(num, 20) == False:                               # Called O(n) times expected (prime density ~1/n)
+        return generate_large_prime(n_bits)                    
     else: return num
-```
-The time complexity of this function (treating Fermat as a constant time operation) is O(k*n^4). This is because the function is dependent on how long it takes to find a prime number 
-of bit size n. The chances of finding a prime number decreases at a rate of 1/n bits (the number of bits long the number can be). So, since the chance of finding a prime decreases
-linearly as a function of the inverse of n, the time complexity actually finding a prime number is bounded by O(n). We run Fermat's each time we test a numbers primality, and since Fermat's
-is O(k*N^3) our overall time complexity is O(k*n^4).
 
-Space complexity is O(n) Although this function is recursive, it recurses linearly, and the number of times it will run is linear with n.
+def fermat(N: int, k: int) -> bool:
+    if N == 2 or N == 3: return True
+    if N <= 1 or N % 2 == 0 or N % 3 == 0: return False
+    for j in range(1, k + 1):                                  # O(k) iterations
+        a = random.randint(1, N - 1)
+        if mod_exp(a, N - 1, N) != 1: return False             # Called k times per fermat test
+    return True
+
+def mod_exp(x: int, y: int, N: int) -> int:
+    if y == 0: return 1
+    z = mod_exp(x, y // 2, N)                                  # O(n) recursive calls (bit length)
+    if y % 2 == 0: return (z ** 2) % N                         # O(n²) multiplication
+    else: return (x * (z ** 2)) % N                            # O(n²) multiplication
+```
+The Time complexity of generate_large_prime is O(k * n^4). At the lowest level we call mod_Exp which runs in O(n^3 times) since it has O(n) recursive calls, and then O(n^2) multiplication per call. Then
+fermat run just runs the mod_exp function k-times, so it is O(n^3 * k). We can expect generate large primes to take about n tries to actually generate a prime number of bit length n since prime density is 1/n (n bits).
+This leaves us with a total time complexity of O(n^4 * k)
+
+#### Space
+```py
+def generate_large_prime(n_bits: int) -> int:
+    num = random.getrandbits(n_bits)
+    if fermat(num, 20) == False:
+        return generate_large_prime(n_bits)                    # O(n) recursion depth expected
+    else: return num
+
+def fermat(N: int, k: int) -> bool:
+    if N == 2 or N == 3: return True
+    if N <= 1 or N % 2 == 0 or N % 3 == 0: return False
+    for j in range(1, k + 1):                                  # O(1) space for loop
+        a = random.randint(1, N - 1)
+        if mod_exp(a, N - 1, N) != 1: return False             # O(n) space from recursion
+    return True
+
+def mod_exp(x: int, y: int, N: int) -> int:
+    if y == 0: return 1
+    z = mod_exp(x, y // 2, N)                                  # O(n) recursion depth
+    if y % 2 == 0: return (z ** 2) % N
+    else: return (x * (z ** 2)) % N
+```
+The Space complexity of generate_large_prime is O(n^2). We can expect the recursion depth of generate_large_prime to be O(n) since it should take n number of tries to find a prime. We also expect the
+mod_exp function to have recursion depth of O(n). Since these are nested, our overall space complexity should be O(n^2)
+
 
 ### Empirical Data
 
@@ -74,10 +86,12 @@ Space complexity is O(n) Although this function is recursive, it recurses linear
 
 ### Comparison of Theoretical and Empirical Results
 
-- Theoretical order of growth: O(k*n^4) ~ growth ratio of about 16 * k
+- Theoretical order of growth: O(k*n^4)
 - Measured constant of proportionality for theoretical order: 3.37 * 10^(-12)
-- Empirical order of growth (if different from theoretical): The growth ratio is closer to 20 near the end. This is pretty close to our 16 considering we also multiply by k
+- Empirical order of growth (if different from theoretical): n^3.8 (very close, I would say this matches)
 - Measured constant of proportionality for empirical order: 3.07 × 10^(-11)
+
+Our theoretical was actually very close to our empirical. There isn't much to question.
 
 ![img](Figure_1.png)
 
@@ -91,53 +105,81 @@ value. Then we return N, the product of the original 2 primes, and our e and d v
 
 ### Theoretical Analysis - Key Pair Generation
 
-#### Time and Space
+#### Time
 
 ```py
 def generate_key_pairs(n_bits) -> tuple[int, int, int]:
-    p = generate_large_prime(n_bits)
-    q = generate_large_prime(n_bits)
+    p = generate_large_prime(n_bits)                           # O(k·n⁴)
+    q = generate_large_prime(n_bits)                           # O(k·n⁴)
     if p == q or p == None or q == None:
-        return generate_key_pairs(n_bits)
+        return generate_key_pairs(n_bits)                      # Rare case, doesn't affect complexity
 
-    N = p*q
-    r = (p-1)*(q-1)
+    N = p*q                                                    # O(n²) multiplication
+    r = (p-1)*(q-1)                                            # O(n²) multiplication
     e = 1
 
-    for prime in primes:
-        if gcd(prime, r) == 1:
+    for prime in primes:                                       # O(1) fixed list iteration
+        if gcd(prime, r) == 1:                                 # O(n) per gcd call
             e = prime
             break
 
-    d, _, _ = extended_euclid(e, r)
-    d = d % r
+    d, _, _ = extended_euclid(e, r)                            # O(n^3)
+    d = d % r                                                
 
     return N, e, d
-```
-Time complexity is O(k*n^4). We run generate_large_prime twice, which is O(k*n^4). Then, we multiply (p-1)*(q-1) which is OO(n^2), and we run euclid's (gcd) and extended euclid's, 
-both of which are O(n). We get O(2*(k*n^4) + n^2 + 2n). k*n^4 dominates everything else.
-Space complexity is O(n)
 
-```py
 def gcd(a, b):
     if b == 0:
         return a
-    return gcd(b, a % b)
-```
-Upon looking back, I probably could have just not written this function, but oh well.
-Time complexity is O(n) (n being the bit size of the smaller between a and b). a % b essentially cuts the problem size in half, reducing bit size by 1 on average.
-Space complexity is also O(n) because the recursion depth is the same as the number of iterations, which scales linearly with bit size.
+    return gcd(b, a % b)                                       # O(n) recursive calls
 
-```py
 def extended_euclid(a, b):
     if b == 0:
         return 1, 0, a
-    x, y, d = extended_euclid(b, a % b)
-    return y, x - y * (a // b), d
+    x, y, d = extended_euclid(b, a % b)                        # O(n) recursive calls
+    return y, x - y * (a // b), d                              # O(n^2)  multiplication                 
 ```
-This is pretty much identical to normal Euclid's, or gcd as I named it.
-Time complexity is O(n) (n being the bit size of the smaller between a and b)
-Space complexity is also O(n) look above ^
+The Time complexity is O(k*n^4) for generate_key_pairs. We run generate_large_prime twice, which is O(k*n^4). Then, we multiply p*q and (p-1)*(q-1) which is O(n^2), 
+and we run euclid's, which is O(n), and extended euclid's, which is O(n^3). Really, nothing else can dominate the time complexity of random number generation, so O(k*n^4) dominates everything.
+
+#### Space
+
+```pycon
+def generate_key_pairs(n_bits) -> tuple[int, int, int]:
+    p = generate_large_prime(n_bits)                           # O(n^2) space
+    q = generate_large_prime(n_bits)                           # O(n^2) space  
+    if p == q or p == None or q == None:
+        return generate_key_pairs(n_bits)                      # Additional O(n²) if recursive
+
+    N = p*q                                                    # O(n) space
+    r = (p-1)*(q-1)                                            # O(n) space
+    e = 1
+
+    for prime in primes:                                       # O(1) space
+        if gcd(prime, r) == 1:                                 # O(n) space from recursion
+            e = prime
+            break
+
+    d, _, _ = extended_euclid(e, r)                            # O(n) space from recursion
+    d = d % r                                                  # O(n) space
+
+    return N, e, d
+
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a % b)                                       # O(n) recursion depth
+
+def extended_euclid(a, b):                                     # O(n^2)
+    if b == 0:
+        return 1, 0, a
+    x, y, d = extended_euclid(b, a % b)                        # O(n) recursion depth
+    return y, x - y * (a // b), d                              # O(n) multiplication
+```
+
+The Space complexity is O(n^2) for generate_key_pairs. As established, generate_large_prime is O(n^2) complexity, and we call that twice in the very beginning. Multiplication takes O(n) space complexity.
+Extended Euclid's also is O(n^2) since it has a recursion depth of n, and it performs multiplication on each layer of recursion. We are left with O(3*2^n) or O(2^n).
+
 
 ### Empirical Data
 
@@ -154,8 +196,10 @@ Space complexity is also O(n) look above ^
 
 - Theoretical order of growth: again, O(k*n^4)
 - Measured constant of proportionality for theoretical order: 3.21 × 10^(-9)
-- Empirical order of growth (if different from theoretical): The growth was pretty all over the place. Near the end its growth rate was quote bad, closer to O(n^5)
+- Empirical order of growth (if different from theoretical): n^3.14
 - Measured constant of proportionality for empirical order: 7.79 × 10^(-13)
+
+Our empirical runtime was a bit faster than our theoretical runtime. I imagine it is just due to efficiencies in modern cpu caching and python interpreters.
 
 ![img](rsa_keygen_analysis.png)
 
@@ -167,15 +211,93 @@ Luke and I sent eachother messages using eachother's public keys. I'm not sure w
 
 ### Theoretical Analysis - Encrypt and Decrypt
 
-#### Time and Space
+#### Time
 
-Encryption
-Time complexity is O(n) 
-Space complexity is O(n)
+```pycon
+def transform(
+    data: bytes,
+    N: int,
+    exponent: int,
+    in_chunk_bytes: int,
+    out_chunk_bytes: int,
+) -> bytes:
+    out = []
+    for block in chunks(data, in_chunk_bytes):                          # O(1)
+        if len(block) != in_chunk_bytes:
+            raise ValueError("Input not aligned to chunk size.")
+        x = int.from_bytes(block, "big")
+        y = mod_exp(x, exponent, N)                                     # O(n^3)
+        out.append(y.to_bytes(out_chunk_bytes, "big"))
+    return b"".join(out)
 
-Decryption
-Time complexity is O(n^2)
-Space complexity is O(n)
+def main(key_file: Path, message_file: Path, output_file: Path):
+    n_bytes, plain_bytes, N, exponent = read_key(key_file)              # O(1)
+    input_bytes = message_file.read_bytes()                             # O(L)
+
+    mode = decide_mode(len(input_bytes), n_bytes)
+    start = time()
+    if mode == "encrypt":
+        prepared = add_len_header_and_pad(input_bytes, plain_bytes)
+        # plaintext blocks -> ciphertext blocks
+        result = transform(                                                                 # O(n^3) for encrypt
+            prepared, N, exponent, in_chunk_bytes=plain_bytes, out_chunk_bytes=n_bytes
+        )
+    else:
+        # ciphertext blocks -> plaintext blocks
+        decrypted_blocks = transform(                                                       # O(n^3) for decrypt
+            input_bytes, N, exponent, in_chunk_bytes=n_bytes, out_chunk_bytes=plain_bytes
+        )
+        result = strip_len_header_and_unpad(decrypted_blocks)
+    print(f"{mode} in {time() - start:.6f} seconds")
+    output_file.write_bytes(result)
+```
+
+The Time complexity of encrypt and decrypt are O(n^3). Transform iterates through the blocks of the input, running mod_exp on each block. We decided to treat the block iteration as a constant time operations since
+we had no idea how to deal with that.
+
+#### Space
+
+```pycon
+def transform(
+    data: bytes,
+    N: int,
+    exponent: int,
+    in_chunk_bytes: int,
+    out_chunk_bytes: int,
+) -> bytes:
+    out = []
+    for block in chunks(data, in_chunk_bytes):                      # O(1)
+        if len(block) != in_chunk_bytes:
+            raise ValueError("Input not aligned to chunk size.")
+        x = int.from_bytes(block, "big")
+        y = mod_exp(x, exponent, N)                                 # O(n) mod_exp is O(n) ^
+        out.append(y.to_bytes(out_chunk_bytes, "big"))
+    return b"".join(out)
+
+def main(key_file: Path, message_file: Path, output_file: Path):
+    n_bytes, plain_bytes, N, exponent = read_key(key_file)          # O(length)
+    input_bytes = message_file.read_bytes()                         
+
+    mode = decide_mode(len(input_bytes), n_bytes)
+    start = time()
+    if mode == "encrypt":
+        prepared = add_len_header_and_pad(input_bytes, plain_bytes)     # O(n) stores bytes
+        # plaintext blocks -> ciphertext blocks
+        result = transform(                                             # O(n)
+            prepared, N, exponent, in_chunk_bytes=plain_bytes, out_chunk_bytes=n_bytes
+        )
+    else:
+        # ciphertext blocks -> plaintext blocks
+        decrypted_blocks = transform(                                   # O(n)
+            input_bytes, N, exponent, in_chunk_bytes=n_bytes, out_chunk_bytes=plain_bytes
+        )
+        result = strip_len_header_and_unpad(decrypted_blocks)
+    print(f"{mode} in {time() - start:.6f} seconds")
+    output_file.write_bytes(result)
+```
+
+The Space complexity of encrypt and decrypt are both O(length + n). The function has to store the message, and they key to encrypt and decrypt. We get O(length) while reading in the file, and O(n) while
+running mod_exp.
 
 ### Empirical Data
 
@@ -183,43 +305,62 @@ Space complexity is O(n)
 
 | N    | time (ms) |
 |------|-----------|
-| 64   | 0.117     |
-| 128  | 0.058     |
-| 256  |  0.046    |
-| 512  |  0.056    |
-| 1024 |  0.130     |
-| 2048 |  0.211   |
+| 64   | 0.001     |
+| 128  | 0.001     |
+| 256  | 0.001     |
+| 512  | 0.002     |
+| 1024 | 0.002     |
+| 2048 | 0.001     |
 
 #### Decryption
 
 | N    | time (ms) |
 |------|-----------|
-| 64   |  3.420  |
-| 128  |   2.862    |
-| 256  |  6.509    |
-| 512  |  18.855    |
-| 1024 |  66.066   |
-| 2048 |  233.596  |
+| 64   | 0.066     |
+| 128  | 0.158     |
+| 256  | 0.5440    |
+| 512  | 3.771     |
+| 1024 | 17.476    |
+| 2048 | 127.330   |
 
 ### Comparison of Theoretical and Empirical Results
 
 #### Encryption
 
-- Theoretical order of growth: O(n)
+- Theoretical order of growth: O(n^3)
 - Measured constant of proportionality for theoretical order: 0.00047 ms/bit
-- Empirical order of growth (if different from theoretical): wildly variable. Actually decreased from 64 bits to 128, and then again to 256
+- Empirical order of growth (if different from theoretical): O(n^0.02)
 - Measured constant of proportionality for empirical order: 0.10 ms
+
+The empirical growth of my encryption was really small. It ran SO much faster than I expected. I'm really confused as to why. There must be lots of ways to make it more efficient.
 
 #### Decryption
 
-- Theoretical order of growth: O(n^2)
+- Theoretical order of growth: O(n^3)
 - Measured constant of proportionality for theoretical order: 0.00022 ms/bit^2
-- Empirical order of growth (if different from theoretical): the growth is less than O(n^2), closer to O(n^1.6)for our data set
+- Empirical order of growth (if different from theoretical): O(n^2.22)
 - Measured constant of proportionality for empirical order: 0.0024ms/bit^2
+
+The emprical order of growth for encryption was pretty close to my theoretical, though, a bit faster still. Again, I think it's just efficiencies in modern computers and cpu caching.
+
+![img](encrypt.png)
 
 ### Encrypting and Decrypting With A Classmate
 
-My brother and I sent eachother messages and eachother's public keys and decrypted them. It was fun.
+My brother Luke and I sent eachother messages and eachother's public keys and decrypted them. It was fun.
+
+Luke's encrypted message was:
+
+��4�ה�̵(W�ьq�F��&��ҙK�~�+�k-�������8����3`8%#3�Yy`�� ��$PN����
+
+I decrypted it with his secret key:
+
+10768852168092548963283839052520081597
+89
+
+and ended up with:
+
+"fourscore and seven years ago, jack moved into the colony"
 
 ## Stretch 2
 
@@ -233,7 +374,7 @@ is a -1, then we return true.
 
 Since Miller Rabin does multiple passes on each number, really scrutinizing each one, the chances of it missing primes goes down.
 In fact, Miller Rabin is capable of catching carmichael numbers, which Fermat misses. While Fermat is slightly Faster, Miller Rabin
-also doesnt need as many passes to reach the same probability as Fermat. It is just kind of better.
+also doesn't need as many passes to reach the same probability as Fermat. It is just kind of better.
 
 ```py
 def fermat(N: int, k: int) -> bool:
