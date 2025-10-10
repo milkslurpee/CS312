@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="resubmission">
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="Project 3 init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/project-rsa/test_rsa_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/project-rsa/test_rsa_results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project3/network-routing-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project3/network-routing-project-report.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project3/network_routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project3/network_routing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,34 +43,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests for test_rsa.test_composites_miller_rabin.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_rsa.test_primes_fermat.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_scc.test_prepost.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_scc.test_scc_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in project-scc.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_rsa.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_scc.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EnDecrypt.executor&quot;: &quot;Run&quot;,
-    &quot;Python.benchmark.executor&quot;: &quot;Run&quot;,
-    &quot;Python.benchmark2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.compute_coefficient.executor&quot;: &quot;Run&quot;,
-    &quot;Python.encrypt_decrypt_files.executor&quot;: &quot;Run&quot;,
-    &quot;Python.encryptspeed.executor&quot;: &quot;Run&quot;,
-    &quot;Python.plot_empirical_theoretical_compared.executor&quot;: &quot;Run&quot;,
-    &quot;Python.run_scc_analysis.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_rsa.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_scc.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Stuff/Homework/Fall2025/CS312&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests for Project3.test_dijkstras.test_tiny_network_linear_pq.executor": "Run",
+    "Python tests.Python tests for Project3.test_dijkstras.test_very_large_network_linear_pq.executor": "Run",
+    "Python tests.Python tests for test_rsa.test_composites_miller_rabin.executor": "Run",
+    "Python tests.Python tests for test_rsa.test_primes_fermat.executor": "Run",
+    "Python tests.Python tests for test_scc.test_prepost.executor": "Run",
+    "Python tests.Python tests for test_scc.test_scc_2.executor": "Run",
+    "Python tests.Python tests in project-scc.executor": "Run",
+    "Python tests.Python tests in test_dijkstras.py.executor": "Run",
+    "Python tests.Python tests in test_rsa.py.executor": "Run",
+    "Python tests.Python tests in test_scc.py.executor": "Run",
+    "Python.EnDecrypt.executor": "Run",
+    "Python.benchmark.executor": "Run",
+    "Python.benchmark2.executor": "Run",
+    "Python.compute_coefficient.executor": "Run",
+    "Python.encrypt_decrypt_files.executor": "Run",
+    "Python.encryptspeed.executor": "Run",
+    "Python.plot_empirical_theoretical_compared.executor": "Run",
+    "Python.run_scc_analysis.executor": "Run",
+    "Python.test_rsa.executor": "Run",
+    "Python.test_scc.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Stuff/Homework/Fall2025/CS312",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc\OGanalysis" />
@@ -78,73 +82,7 @@
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_rsa.py">
-    <configuration name="EnDecrypt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CS312" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project1/project-rsa" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project1/project-rsa/EnDecrypt.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="benchmark2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CS312" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project1/project-rsa" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project1/project-rsa/benchmark2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="encrypt_decrypt_files" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CS312" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project1/project-rsa" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project1/project-rsa/encrypt_decrypt_files.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Python tests in test_dijkstras.py">
     <configuration name="encryptspeed" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
@@ -167,6 +105,51 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for Project3.test_dijkstras.test_tiny_network_linear_pq" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="CS312" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Project3.test_dijkstras.test_tiny_network_linear_pq&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for Project3.test_dijkstras.test_very_large_network_linear_pq" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="CS312" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Project3.test_dijkstras.test_very_large_network_linear_pq&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_dijkstras.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="CS312" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Project3/test_dijkstras.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests in test_rsa.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
@@ -184,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_dijkstras.py" />
+        <item itemvalue="Python tests.Python tests for Project3.test_dijkstras.test_very_large_network_linear_pq" />
+        <item itemvalue="Python tests.Python tests for Project3.test_dijkstras.test_tiny_network_linear_pq" />
         <item itemvalue="Python tests.Python tests in test_rsa.py" />
         <item itemvalue="Python.encryptspeed" />
-        <item itemvalue="Python.EnDecrypt" />
-        <item itemvalue="Python.benchmark2" />
-        <item itemvalue="Python.encrypt_decrypt_files" />
       </list>
     </recent_temporary>
   </component>
@@ -327,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759547826549</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Project 3 init">
+      <option name="closed" value="true" />
+      <created>1760059929714</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1760059929714</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -356,6 +347,7 @@
     <MESSAGE value="finished core + report" />
     <MESSAGE value="touch ups" />
     <MESSAGE value="resubmission" />
-    <option name="LAST_COMMIT_MESSAGE" value="resubmission" />
+    <MESSAGE value="Project 3 init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project 3 init" />
   </component>
 </project>

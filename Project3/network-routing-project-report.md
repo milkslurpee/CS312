@@ -4,7 +4,11 @@
 
 ### Design Experience
 
-*Fill me in*
+I did my design experience with my little brother Luke
+Discussion points
+- Linear Array PQ
+  - Implement insert by simply adding the edge to the PQ (no need to sort)
+  - Implement deleteMin by iterating through the array
 
 ### Theoretical Analysis - Dijkstra's With Linear PQ
 
