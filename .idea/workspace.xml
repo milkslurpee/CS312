@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="touch ups">
-      <change afterPath="$PROJECT_DIR$/Project1/project-rsa/EnDecrypt.py" afterDir="false" />
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="resubmission">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/project-rsa/benchmark2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/project-rsa/benchmark2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/project-rsa/rsa-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/project-rsa/rsa-project-report.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/project-rsa/rsa_keygen_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/project-rsa/rsa_keygen_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/project-rsa/test_rsa.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/project-rsa/test_rsa.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project1/project-rsa/test_rsa_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/project-rsa/test_rsa_results.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,34 +42,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python tests.Python tests for test_rsa.test_composites_miller_rabin.executor": "Run",
-    "Python tests.Python tests for test_rsa.test_primes_fermat.executor": "Run",
-    "Python tests.Python tests for test_scc.test_prepost.executor": "Run",
-    "Python tests.Python tests for test_scc.test_scc_2.executor": "Run",
-    "Python tests.Python tests in project-scc.executor": "Run",
-    "Python tests.Python tests in test_rsa.py.executor": "Run",
-    "Python tests.Python tests in test_scc.py.executor": "Run",
-    "Python.EnDecrypt.executor": "Run",
-    "Python.benchmark.executor": "Run",
-    "Python.benchmark2.executor": "Run",
-    "Python.compute_coefficient.executor": "Run",
-    "Python.encrypt_decrypt_files.executor": "Run",
-    "Python.encryptspeed.executor": "Run",
-    "Python.plot_empirical_theoretical_compared.executor": "Run",
-    "Python.run_scc_analysis.executor": "Run",
-    "Python.test_rsa.executor": "Run",
-    "Python.test_scc.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Stuff/Homework/Fall2025/CS312",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for test_rsa.test_composites_miller_rabin.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_rsa.test_primes_fermat.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_scc.test_prepost.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_scc.test_scc_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in project-scc.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_rsa.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_scc.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.EnDecrypt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.benchmark.executor&quot;: &quot;Run&quot;,
+    &quot;Python.benchmark2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.compute_coefficient.executor&quot;: &quot;Run&quot;,
+    &quot;Python.encrypt_decrypt_files.executor&quot;: &quot;Run&quot;,
+    &quot;Python.encryptspeed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_empirical_theoretical_compared.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_scc_analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_rsa.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_scc.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Stuff/Homework/Fall2025/CS312&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc\OGanalysis" />
@@ -83,7 +78,7 @@
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.EnDecrypt">
+  <component name="RunManager" selected="Python tests.Python tests in test_rsa.py">
     <configuration name="EnDecrypt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
@@ -150,7 +145,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="plot_empirical_theoretical_compared" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="encryptspeed" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,11 +154,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project2/project-scc" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project1/project-rsa" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project2/project-scc/plot_empirical_theoretical_compared.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project1/project-rsa/encryptspeed.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -189,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_rsa.py" />
+        <item itemvalue="Python.encryptspeed" />
         <item itemvalue="Python.EnDecrypt" />
         <item itemvalue="Python.benchmark2" />
         <item itemvalue="Python.encrypt_decrypt_files" />
-        <item itemvalue="Python tests.Python tests in test_rsa.py" />
-        <item itemvalue="Python.plot_empirical_theoretical_compared" />
       </list>
     </recent_temporary>
   </component>
@@ -324,7 +319,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759495770546</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="resubmission">
+      <option name="closed" value="true" />
+      <created>1759547826549</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1759547826549</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -352,6 +355,7 @@
     <MESSAGE value="theoretical analysis" />
     <MESSAGE value="finished core + report" />
     <MESSAGE value="touch ups" />
-    <option name="LAST_COMMIT_MESSAGE" value="touch ups" />
+    <MESSAGE value="resubmission" />
+    <option name="LAST_COMMIT_MESSAGE" value="resubmission" />
   </component>
 </project>
