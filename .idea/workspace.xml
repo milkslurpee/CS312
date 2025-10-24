@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="Project 3 init">
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="Baseline + Core(but using built in PQ)">
+      <change afterPath="$PROJECT_DIR$/Project3/empirical1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project3/empirical2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project3/empirical3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project3/empirical4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project3/luke.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project3/network-routing-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project3/network-routing-project-report.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project3/network_routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project3/network_routing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project3/plot_empirical_theoretical_compared.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project3/plot_empirical_theoretical_compared.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project3/run_dijkstra_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project3/run_dijkstra_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project3/test_dijkstras_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project3/test_dijkstras_results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_dijkstras_results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_rsa_results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_scc_results.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +63,10 @@
     "Python tests.Python tests for test_rsa.test_primes_fermat.executor": "Run",
     "Python tests.Python tests for test_scc.test_prepost.executor": "Run",
     "Python tests.Python tests for test_scc.test_scc_2.executor": "Run",
+    "Python tests.Python tests in ConvexHull.executor": "Run",
+    "Python tests.Python tests in Project4.executor": "Run",
     "Python tests.Python tests in project-scc.executor": "Run",
+    "Python tests.Python tests in test_convex_hull.py.executor": "Run",
     "Python tests.Python tests in test_dijkstras.py.executor": "Run",
     "Python tests.Python tests in test_rsa.py.executor": "Run",
     "Python tests.Python tests in test_scc.py.executor": "Run",
@@ -62,7 +76,12 @@
     "Python.compute_coefficient.executor": "Run",
     "Python.encrypt_decrypt_files.executor": "Run",
     "Python.encryptspeed.executor": "Run",
+    "Python.main (1).executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.network_routing.executor": "Run",
     "Python.plot_empirical_theoretical_compared.executor": "Run",
+    "Python.plotting.executor": "Run",
+    "Python.run_dijkstra_analysis.executor": "Run",
     "Python.run_scc_analysis.executor": "Run",
     "Python.test_rsa.executor": "Run",
     "Python.test_scc.executor": "Run",
@@ -70,20 +89,22 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Stuff/Homework/Fall2025/CS312",
+    "last_opened_file_path": "C:/Stuff/Homework/Fall2025/CS312/Project3",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Stuff\Homework\Fall2025\CS312\Project3" />
+      <recent name="C:\Stuff\Homework\Fall2025\CS312\Project3\graphs" />
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc\OGanalysis" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_dijkstras.py">
-    <configuration name="encryptspeed" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests in Project4">
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -92,11 +113,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project1/project-rsa" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ConvexHull" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project1/project-rsa/encryptspeed.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ConvexHull/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -105,52 +126,59 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for Project3.test_dijkstras.test_tiny_network_linear_pq" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Project3.test_dijkstras.test_tiny_network_linear_pq&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project4/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for Project3.test_dijkstras.test_very_large_network_linear_pq" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in ConvexHull" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ConvexHull" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Project3.test_dijkstras.test_very_large_network_linear_pq&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in test_dijkstras.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="CS312" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Project3/test_dijkstras.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/ConvexHull&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_rsa.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in Project4" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="CS312" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Project4&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_convex_hull.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,17 +189,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Project1/project-rsa/test_rsa.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/ConvexHull/test_convex_hull.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_dijkstras.py" />
-        <item itemvalue="Python tests.Python tests for Project3.test_dijkstras.test_very_large_network_linear_pq" />
-        <item itemvalue="Python tests.Python tests for Project3.test_dijkstras.test_tiny_network_linear_pq" />
-        <item itemvalue="Python tests.Python tests in test_rsa.py" />
-        <item itemvalue="Python.encryptspeed" />
+        <item itemvalue="Python tests.Python tests in Project4" />
+        <item itemvalue="Python tests.Python tests in test_convex_hull.py" />
+        <item itemvalue="Python tests.Python tests in ConvexHull" />
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -318,7 +346,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760059929714</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Baseline + Core(but using built in PQ)">
+      <option name="closed" value="true" />
+      <created>1760073530221</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1760073530221</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -348,6 +384,7 @@
     <MESSAGE value="touch ups" />
     <MESSAGE value="resubmission" />
     <MESSAGE value="Project 3 init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project 3 init" />
+    <MESSAGE value="Baseline + Core(but using built in PQ)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Baseline + Core(but using built in PQ)" />
   </component>
 </project>

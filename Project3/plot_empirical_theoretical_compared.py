@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-
+import math
 # Run run_dijkstra_analysis.py to populate the runtimes
 from _runtimes import runtimes
 
@@ -7,10 +7,10 @@ from _runtimes import runtimes
 def main():
     # Define this
     def theoretical_big_o(v, e):
-        return 1
+        return ((v + e)*math.log2(v) / 15000000)
 
     # Fill in from result using compute_coefficient
-    coeff = 1
+    coeff = 0.2597388437816075
 
     vv, ee, times = zip(*runtimes)
     #
@@ -41,7 +41,7 @@ def main():
     )
 
     # Update title, legend, and axis labels as needed
-    ax.legend(['Observed', 'Theoretical O(FILL ME IN)'])
+    ax.legend(['Observed', 'Theoretical O(((V + E) logV) / 15mil)'])
     ax.set_xlabel('|V|')
     ax.set_ylabel('|E|')
     ax.set_zlabel('Runtime')

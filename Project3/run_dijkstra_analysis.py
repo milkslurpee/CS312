@@ -89,11 +89,11 @@ def main():
     noise = 0.05
     sizes = [500, 1000, 1500, 2000, 2500, 3000, 3500]
 
-    pq_algorithm = 'Linear'
-    algorithm = find_shortest_path_with_linear_pq
+    # pq_algorithm = 'Linear'
+    # algorithm = find_shortest_path_with_linear_pq
 
-    # pq_algorithm = 'Heap'
-    # algorithm = find_shortest_path_with_heap
+    pq_algorithm = 'Heap'
+    algorithm = find_shortest_path_with_heap
 
     runtimes = []
     for size in sizes:
