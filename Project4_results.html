@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Report</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            flex-direction: column;
+            font-family: monospace, sans-serif;
+            line-height: 1.4;
+            background-color: #f9f9f9;
+            color: rgb(0, 46, 93);
+        }
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        header, footer {
+            background-color: rgb(0, 46, 93);
+            color: white;
+            text-align: center;
+        }
+        header h1, footer p {
+            margin: 0;
+            padding: 5px 0;
+        }
+        header {
+            margin-bottom: 10px;
+        }
+        footer {
+            margin-top: 10px;
+        }
+        h2 {
+            padding: 5px 0;
+        }
+        .test-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 50px;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        .test-result-passed, .test-result-failed {
+            padding: 5px;
+            border-radius: 5px;
+            margin: 10px 50px;
+            position: relative;
+        }
+        .test-result-passed {
+            background-color: #d4edda;
+            border: 2px solid #c3e6cb;
+        }
+        .test-result-failed {
+            background-color: #f8d7da;
+            border: 2px solid #f5c6cb;
+        }
+        .result-header {
+            text-align: center;
+        }
+        .result-header h2 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .result-subheader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5px;
+            font-size: 1em;
+            padding: 0 10px;
+        }
+        .result-subheader .status, .result-subheader .score {
+            font-size: 1em;
+        }
+        .result-subheader .status h2, .result-subheader .score h2 {
+            display: inline;
+            font-size: 1em;
+            margin-right: 5px;
+        }
+        ul.test-info {
+            list-style-type: none;
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        ul.test-info li {
+            margin: 6px 0;
+        }
+        ul.test-info li.fail {
+            color: #721c24;
+        }
+        ul.test-info li.pass {
+            color: #155724;
+        }
+        .blocked-message {
+            margin: 10px 20px;
+            padding: 10px;
+            font-style: italic;
+            color: #555;
+        }
+        pre.failure-output {
+            background: #fff0f0;
+            border: 1px solid #f5c6cb;
+            padding: 8px;
+            border-radius: 3px;
+            margin-top: 5px;
+            white-space: pre-wrap;
+        }
+        .comparison-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+            margin: 10px 0;
+            padding: 0 10px;
+        }
+        .section {
+            flex: 1;
+            min-width: 300px;
+        }
+        .content {
+            background: rgb(245, 245, 245);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <h1>Project4 Results</h1>
+        </header>
+        <main class="main-content">
+            <div class="test-summary">
+                <span>Passed: 0 / 3</span>
+                <span>Total Score: 0 / 0</span>
+            </div>
+            
+            
+            <div class="test-result-failed">
+                <div class="content-wrapper">
+                    <div class="result-header">
+                        <h2>basic</h2>
+                        <div class="result-subheader">
+                            <div class="status">
+                                <h2>Failed</h2>
+                            </div>
+                            <div class="score">
+                                <h2>Score:</h2> 0 / 0
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <ul class="test-info">
+                    
+                        
+                            <li class="fail">test_trapezoid_dvcq — Fail</li>
+                            
+                                <pre class="failure-output">args = (), kwargs = {}
+
+    @wraps(test_function)
+    def new_test_function(*args, **kwargs):
+        try:
+>           module = importlib.import_module(module_name)
+
+C:\Users\johns\miniconda3\envs\CS312\Lib\site-packages\byu_pytest_utils\utils.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\johns\miniconda3\envs\CS312\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    # Uncomment this line to import some functions that can help
+    # you debug your algorithm
+    from plotting import draw_line, draw_hull, circle_point
+>   import PyQt5.QtCore
+E   ImportError: DLL load failed while importing QtCore: The specified module could not be found.
+
+convex_hull.py:4: ImportError
+
+During handling of the above exception, another exception occurred:
+
+args = (), kwargs = {}
+
+    @wraps(test_function)
+    def new_test_function(*args, **kwargs):
+        try:
+            module = importlib.import_module(module_name)
+            func = getattr(module, function_name)
+            return test_function(func, *args, **kwargs)
+    
+        except ModuleNotFoundError as err:
+            pytest.fail(
+                f'{type(err).__name__}: {err}\n'
+                f'Unable to load {module_name}.py. '
+                f'Was {module_name}.py submitted?'
+            )
+        except ImportError as err:
+>           pytest.fail(
+                f'{type(err).__name__}: {err}\n'
+                f'Unable to load {module_name}.py. '
+                f'Are there errors in the file?'
+            )
+E           Failed: ImportError: DLL load failed while importing QtCore: The specified module could not be found.
+E           Unable to load convex_hull.py. Are there errors in the file?
+
+C:\Users\johns\miniconda3\envs\CS312\Lib\site-packages\byu_pytest_utils\utils.py:95: Failed</pre>
+                            
+                        
+                    
+                        
+                            <li class="fail">test_half_tiny_dvcq — Fail</li>
+                            
+                                <pre class="failure-output">args = (), kwargs = {}
+
+    @wraps(test_function)
+    def new_test_function(*args, **kwargs):
+        try:
+>           module = importlib.import_module(module_name)
+
+C:\Users\johns\miniconda3\envs\CS312\Lib\site-packages\byu_pytest_utils\utils.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\johns\miniconda3\envs\CS312\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    # Uncomment this line to import some functions that can help
+    # you debug your algorithm
+    from plotting import draw_line, draw_hull, circle_point
+>   import PyQt5.QtCore
+E   ImportError: DLL load failed while importing QtCore: The specified module could not be found.
+
+convex_hull.py:4: ImportError
+
+During handling of the above exception, another exception occurred:
+
+args = (), kwargs = {}
+
+    @wraps(test_function)
+    def new_test_function(*args, **kwargs):
+        try:
+            module = importlib.import_module(module_name)
+            func = getattr(module, function_name)
+            return test_function(func, *args, **kwargs)
+    
+        except ModuleNotFoundError as err:
+            pytest.fail(
+                f'{type(err).__name__}: {err}\n'
+                f'Unable to load {module_name}.py. '
+                f'Was {module_name}.py submitted?'
+            )
+        except ImportError as err:
+>           pytest.fail(
+                f'{type(err).__name__}: {err}\n'
+                f'Unable to load {module_name}.py. '
+                f'Are there errors in the file?'
+            )
+E           Failed: ImportError: DLL load failed while importing QtCore: The specified module could not be found.
+E           Unable to load convex_hull.py. Are there errors in the file?
+
+C:\Users\johns\miniconda3\envs\CS312\Lib\site-packages\byu_pytest_utils\utils.py:95: Failed</pre>
+                            
+                        
+                    
+                        
+                            <li class="fail">test_tiny_dvcq — Fail</li>
+                            
+                                <pre class="failure-output">args = (), kwargs = {}
+
+    @wraps(test_function)
+    def new_test_function(*args, **kwargs):
+        try:
+>           module = importlib.import_module(module_name)
+
+C:\Users\johns\miniconda3\envs\CS312\Lib\site-packages\byu_pytest_utils\utils.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\johns\miniconda3\envs\CS312\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    # Uncomment this line to import some functions that can help
+    # you debug your algorithm
+    from plotting import draw_line, draw_hull, circle_point
+>   import PyQt5.QtCore
+E   ImportError: DLL load failed while importing QtCore: The specified module could not be found.
+
+convex_hull.py:4: ImportError
+
+During handling of the above exception, another exception occurred:
+
+args = (), kwargs = {}
+
+    @wraps(test_function)
+    def new_test_function(*args, **kwargs):
+        try:
+            module = importlib.import_module(module_name)
+            func = getattr(module, function_name)
+            return test_function(func, *args, **kwargs)
+    
+        except ModuleNotFoundError as err:
+            pytest.fail(
+                f'{type(err).__name__}: {err}\n'
+                f'Unable to load {module_name}.py. '
+                f'Was {module_name}.py submitted?'
+            )
+        except ImportError as err:
+>           pytest.fail(
+                f'{type(err).__name__}: {err}\n'
+                f'Unable to load {module_name}.py. '
+                f'Are there errors in the file?'
+            )
+E           Failed: ImportError: DLL load failed while importing QtCore: The specified module could not be found.
+E           Unable to load convex_hull.py. Are there errors in the file?
+
+C:\Users\johns\miniconda3\envs\CS312\Lib\site-packages\byu_pytest_utils\utils.py:95: Failed</pre>
+                            
+                        
+                    
+                        
+                            <li class="fail">test_tiny_2 — Fail</li>
+                            
+                                <pre class="failure-output">args = (), kwargs = {}
+
+    @wraps(test_function)
+    def new_test_function(*args, **kwargs):
+        try:
+>           module = importlib.import_module(module_name)
+
+C:\Users\johns\miniconda3\envs\CS312\Lib\site-packages\byu_pytest_utils\utils.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\johns\miniconda3\envs\CS312\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    # Uncomment this line to import some functions that can help
+    # you debug your algorithm
+    from plotting import draw_line, draw_hull, circle_point
+>   import PyQt5.QtCore
+E   ImportError: DLL load failed while importing QtCore: The specified module could not be found.
+
+convex_hull.py:4: ImportError
+
+During handling of the above exception, another exception occurred:
+
+args = (), kwargs = {}
+
+    @wraps(test_function)
+    def new_test_function(*args, **kwargs):
+        try:
+            module = importlib.import_module(module_name)
+            func = getattr(module, function_name)
+            return test_function(func, *args, **kwargs)
+    
+        except ModuleNotFoundError as err:
+            pytest.fail(
+                f'{type(err).__name__}: {err}\n'
+                f'Unable to load {module_name}.py. '
+                f'Was {module_name}.py submitted?'
+            )
+        except ImportError as err:
+>           pytest.fail(
+                f'{type(err).__name__}: {err}\n'
+                f'Unable to load {module_name}.py. '
+                f'Are there errors in the file?'
+            )
+E           Failed: ImportError: DLL load failed while importing QtCore: The specified module could not be found.
+E           Unable to load convex_hull.py. Are there errors in the file?
+
+C:\Users\johns\miniconda3\envs\CS312\Lib\site-packages\byu_pytest_utils\utils.py:95: Failed</pre>
+                            
+                        
+                    
+                    </ul>
+                    
+                </div>
+            </div>
+            
+            <div class="test-result-failed">
+                <div class="content-wrapper">
+                    <div class="result-header">
+                        <h2>core</h2>
+                        <div class="result-subheader">
+                            <div class="status">
+                                <h2>Failed</h2>
+                            </div>
+                            <div class="score">
+                                <h2>Score:</h2> 0 / 0
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <div class="blocked-message">Tests for this tier will run when all prerequisite tiers have passed.</div>
+                    
+                </div>
+            </div>
+            
+            <div class="test-result-failed">
+                <div class="content-wrapper">
+                    <div class="result-header">
+                        <h2>stretch1</h2>
+                        <div class="result-subheader">
+                            <div class="status">
+                                <h2>Failed</h2>
+                            </div>
+                            <div class="score">
+                                <h2>Score:</h2> 0 / 0
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <div class="blocked-message">Tests for this tier will run when all prerequisite tiers have passed.</div>
+                    
+                </div>
+            </div>
+            
+            
+        </main>
+        <footer>
+            <p>Generated by byu_pytest_utils on October 23, 2025 11:36 AM</p>
+        </footer>
+    </div>
+</body>
+</html>
