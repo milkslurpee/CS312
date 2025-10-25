@@ -11,7 +11,6 @@ def compute_hull_dvcq(points: list[tuple[float, float]]) -> list[tuple[float, fl
     if len(points) < 3:
         return points
 
-    points = list(points)
     sorted_points = sorted(points, key=lambda point: point[0])
 
     start_time = time.time()
@@ -19,7 +18,6 @@ def compute_hull_dvcq(points: list[tuple[float, float]]) -> list[tuple[float, fl
     end_time = time.time()
 
     hull_points = [(p[0], p[1]) for p in polygon]
-    draw_hull(hull_points, c="red")
     print(f'Time Elapsed (Convex Hull): {end_time - start_time:.3f} sec')
 
     return hull_points

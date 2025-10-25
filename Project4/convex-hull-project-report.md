@@ -7,13 +7,13 @@
 I did my project with my brother Luke. 
 
 #### Discussion Points
-- We start by sorting the points by their x values
-- Then we recursively divide the plot into subplots
-- The base case is a plot of 2 points, we compute the convex hull; we connect the two points 
+- We start by sorting the plot of points by their x values
+- Then we start our divide and conquer algorithm by recursively dividing the plot into subplots
+- The base case is a plot of 2 points, where we "compute the convex hull" by connecting the two points 
 - As we recurse back up we merge the two hulls
   - find the common upper and lower tangents of the two hulls and draw a line between them
   - get rid of inside lines from the two hulls
-- We think that's about it. It should leave us with a finished convex hull.
+- That should leave us with a finished convex hull.
 ### Theoretical Analysis - Convex Hull Divide-and-Conquer
 
 #### Time 
@@ -22,16 +22,14 @@ I did my project with my brother Luke.
 def compute_hull_dvcq(points: list[tuple[float, float]]) -> list[tuple[float, float]]:
     if len(points) < 3:
         return points
-
-    points = list(points)
-    sorted_points = sorted(points, key=lambda point: point[0])
+        
+    sorted_points = sorted(points, key=lambda point: point[0]) # sorted() uses Timsort which is O(nlogn)
 
     start_time = time.time()
     polygon = divide_and_conquer(sorted_points)
     end_time = time.time()
 
     hull_points = [(p[0], p[1]) for p in polygon]
-    draw_hull(hull_points, c="red")
     print(f'Time Elapsed (Convex Hull): {end_time - start_time:.3f} sec')
 
     return hull_points
@@ -40,7 +38,7 @@ def divide_and_conquer(points):
     if len(points) < 3:
         return points
 
-    mid = len(points) // 2
+    mid = len(points) // 2                          #
     left_hull = divide_and_conquer(points[:mid])
     right_hull = divide_and_conquer(points[mid:])
 
@@ -132,7 +130,6 @@ def compute_hull_dvcq(points: list[tuple[float, float]]) -> list[tuple[float, fl
     if len(points) < 3:
         return points
 
-    points = list(points)
     sorted_points = sorted(points, key=lambda point: point[0])
 
     start_time = time.time()
@@ -140,7 +137,6 @@ def compute_hull_dvcq(points: list[tuple[float, float]]) -> list[tuple[float, fl
     end_time = time.time()
 
     hull_points = [(p[0], p[1]) for p in polygon]
-    draw_hull(hull_points, c="red")
     print(f'Time Elapsed (Convex Hull): {end_time - start_time:.3f} sec')
 
     return hull_points
