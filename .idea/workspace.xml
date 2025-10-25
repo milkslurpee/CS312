@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="cleaning stuff">
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="removing redundant code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project4/_analysis/empirical_convex_hull.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/original.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project4/convex-hull-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/convex-hull-project-report.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project4/convex_hull.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/convex_hull.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project4/plot_empirical_theoretical_compared.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/plot_empirical_theoretical_compared.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project4/test_convex_hull_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/test_convex_hull_results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project4/this_is_cool.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/this_is_cool.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,10 +100,11 @@
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc\OGanalysis" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Stuff\Homework\Fall2025\CS312\Project4" />
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_convex_hull.py">
+  <component name="RunManager" selected="Python.plot_empirical_theoretical_compared">
     <configuration name="compute_coefficient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
@@ -114,6 +119,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project4/compute_coefficient.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plot_empirical_theoretical_compared" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS312" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project4/plot_empirical_theoretical_compared.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,28 +208,13 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_scc.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="CS312" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Project2/test_scc.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_convex_hull.py" />
+        <item itemvalue="Python.plot_empirical_theoretical_compared" />
         <item itemvalue="Python.this_is_cool" />
+        <item itemvalue="Python tests.Python tests in test_convex_hull.py" />
         <item itemvalue="Python.compute_coefficient" />
         <item itemvalue="Python.test_convex_hull" />
-        <item itemvalue="Python tests.Python tests in test_scc.py" />
       </list>
     </recent_temporary>
   </component>
@@ -421,7 +433,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761414444122</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="removing redundant code">
+      <option name="closed" value="true" />
+      <created>1761415282463</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1761415282463</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -458,6 +478,7 @@
     <MESSAGE value="cleaning" />
     <MESSAGE value="generated cool visual file with gpt5. Writing report" />
     <MESSAGE value="cleaning stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaning stuff" />
+    <MESSAGE value="removing redundant code" />
+    <option name="LAST_COMMIT_MESSAGE" value="removing redundant code" />
   </component>
 </project>

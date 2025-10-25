@@ -7,45 +7,49 @@ def compute_hull_other(points: list[tuple[float, float]]) -> list[tuple[float, f
     """Return the subset of provided points that define the convex hull"""
     return []
 
+
 def compute_hull_dvcq(points: list[tuple[float, float]]) -> list[tuple[float, float]]:
-    if len(points) < 3:
-        return points
-
-    sorted_points = sorted(points, key=lambda point: point[0])
-
+    sorted_points = sorted(points, key=lambda point: point[0])  # sorted() used Timsort which is O(nlogn)
     start_time = time.time()
-    polygon = divide_and_conquer(sorted_points)
+    convex_hull = divide_and_conquer(sorted_points)  # By the Master Theorem, T(n) = 2T(n/2) + O(n) → O(nlogn)
     end_time = time.time()
 
-    hull_points = [(p[0], p[1]) for p in polygon]
     print(f'Time Elapsed (Convex Hull): {end_time - start_time:.3f} sec')
+    return convex_hull
 
-    return hull_points
 
-def divide_and_conquer(points):
-    if len(points) < 3:
+def divide_and_conquer(
+        points):  # divide and conquer recurses down logn times and considered every point on its way back up, so it's O(nlogn)
+    if len(points) < 3:  # base case
         return points
 
-    mid = len(points) // 2
-    left_hull = divide_and_conquer(points[:mid])
+    mid = len(points) // 2  # Since the problem size is cut in half each time, we recurse down O(logn) times
+    left_hull = divide_and_conquer(points[:mid])  # recursive calls
     right_hull = divide_and_conquer(points[mid:])
 
-    return merge_hulls(left_hull, right_hull)
+    return merge_hulls(left_hull,
+                       right_hull)  # worst case scenario of merge is that all points are along the hull and must be considered O(n)
 
-def merge_hulls(left_hull, right_hull):
+
+def merge_hulls(left_hull,
+                right_hull):  # Worst case: all points are on the boundary (L + R) = O(n),  so merging is O(n)
+
     left_start = max(left_hull, key=lambda p: p[0])
     right_start = min(right_hull, key=lambda p: p[0])
 
-    upper = find_upper_tangent(left_hull, right_hull, left_start, right_start)
-    lower = find_lower_tangent(left_hull, right_hull, left_start, right_start)
+    upper = find_upper_tangent(left_hull, right_hull, left_start,
+                               right_start)  # iterates through points along the hull of both the left and right hulls: O(L + R)
+    lower = find_lower_tangent(left_hull, right_hull, left_start,
+                               right_start)  # iterates through points along the hull of both the left and right hulls: O(L + R)
 
     return construct_hull(left_hull, right_hull, upper, lower)
+
 
 def find_upper_tangent(left_hull, right_hull, left_start, right_start):
     i, j = left_hull.index(left_start), right_hull.index(right_start)
     left, right = True, True
 
-    while left or right:
+    while left or right:  # iterates through points along the hull of both the left and right hulls: O(L + R)
         left, right = False, False
         while True:
             prev_i = (i - 1) % len(left_hull)
@@ -67,11 +71,12 @@ def find_upper_tangent(left_hull, right_hull, left_start, right_start):
                 break
     return i, j
 
+
 def find_lower_tangent(left_hull, right_hull, left_start, right_start):
     i, j = left_hull.index(left_start), right_hull.index(right_start)
     left, right = True, True
 
-    while left or right:
+    while left or right:  # iterates through points along the hull of both the left and right hulls: O(L + R)
         left, right = False, False
         while True:
             next_i = (i + 1) % len(left_hull)
@@ -93,17 +98,19 @@ def find_lower_tangent(left_hull, right_hull, left_start, right_start):
                 break
     return i, j
 
-def construct_hull(left_hull, right_hull, upper, lower):
-    final_hull = []
-    i = lower[0]
 
-    while i != upper[0]:
+def construct_hull(left_hull, right_hull, upper,
+                   lower):  # iterates through points along the hull of both the left and right hulls: O(L + R)
+    final_hull = []
+
+    i = lower[0]
+    while i != upper[0]:  # Traverse left hull from lower to upper tangent → O(L)
         final_hull.append(left_hull[i])
         i = (i + 1) % len(left_hull)
     final_hull.append(left_hull[upper[0]])
 
     j = upper[1]
-    while j != lower[1]:
+    while j != lower[1]:  # Traverse right hull from upper to lower tangent → O(R)
         final_hull.append(right_hull[j])
         j = (j + 1) % len(right_hull)
     final_hull.append(right_hull[lower[1]])

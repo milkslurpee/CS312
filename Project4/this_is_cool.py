@@ -14,8 +14,8 @@ from main import compute_hull_dvcq  # adjust if your main file has a different n
 
 
 # Number of total points to generate
-NUM_POINTS = 10000  # Try 50000+ for a bigger challenge
-NUM_CLUSTERS = 1    # How many clusters to scatter around
+NUM_POINTS = 20000  # Try 50000+ for a bigger challenge
+NUM_CLUSTERS = 2    # How many clusters to scatter around
 
 def generate_irregular_points(n, clusters=5):
     """Generate n points distributed in random, non-square clusters."""
