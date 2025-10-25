@@ -24,7 +24,7 @@ def compute_hull_dvcq(points: list[tuple[float, float]]) -> list[tuple[float, fl
         return points
 
     points = list(points)
-    sorted_points = sorted(points, key=lambda point: point[0])  #sorted() uses Timsort which has O(nlogn) time complexity
+    sorted_points = sorted(points, key=lambda point: point[0])
 
     start_time = time.time()
     polygon = divide_and_conquer(sorted_points)
@@ -32,19 +32,9 @@ def compute_hull_dvcq(points: list[tuple[float, float]]) -> list[tuple[float, fl
 
     hull_points = [(p[0], p[1]) for p in polygon]
     draw_hull(hull_points, c="red")
-    showText(f'Time Elapsed (Convex Hull): {end_time - start_time:.3f} sec')
+    print(f'Time Elapsed (Convex Hull): {end_time - start_time:.3f} sec')
 
     return hull_points
-
-
-def showHull(polygon, color):
-    draw_hull(polygon, color=color)
-    time.sleep(0.5)
-
-
-def showText(text):
-    print(text)
-
 
 def divide_and_conquer(points):
     if len(points) < 3:
@@ -71,7 +61,6 @@ def find_upper_tangent(left_hull, right_hull, left_start, right_start):
 
     while left or right:
         left, right = False, False
-
         while True:
             prev_i = (i - 1) % len(left_hull)
             new_slope = (right_hull[j][1] - left_hull[prev_i][1]) / (right_hull[j][0] - left_hull[prev_i][0])
@@ -81,7 +70,6 @@ def find_upper_tangent(left_hull, right_hull, left_start, right_start):
                 i = prev_i
             else:
                 break
-
         while True:
             next_j = (j + 1) % len(right_hull)
             new_slope = (right_hull[next_j][1] - left_hull[i][1]) / (right_hull[next_j][0] - left_hull[i][0])
@@ -91,7 +79,6 @@ def find_upper_tangent(left_hull, right_hull, left_start, right_start):
                 j = next_j
             else:
                 break
-
     return i, j
 
 def find_lower_tangent(left_hull, right_hull, left_start, right_start):
@@ -100,7 +87,6 @@ def find_lower_tangent(left_hull, right_hull, left_start, right_start):
 
     while left or right:
         left, right = False, False
-
         while True:
             next_i = (i + 1) % len(left_hull)
             new_slope = (right_hull[j][1] - left_hull[next_i][1]) / (right_hull[j][0] - left_hull[next_i][0])
@@ -110,7 +96,6 @@ def find_lower_tangent(left_hull, right_hull, left_start, right_start):
                 i = next_i
             else:
                 break
-
         while True:
             prev_j = (j - 1) % len(right_hull)
             new_slope = (right_hull[prev_j][1] - left_hull[i][1]) / (right_hull[prev_j][0] - left_hull[i][0])
@@ -120,7 +105,6 @@ def find_lower_tangent(left_hull, right_hull, left_start, right_start):
                 j = prev_j
             else:
                 break
-
     return i, j
 
 def construct_hull(left_hull, right_hull, upper, lower):
@@ -157,19 +141,9 @@ def compute_hull_dvcq(points: list[tuple[float, float]]) -> list[tuple[float, fl
 
     hull_points = [(p[0], p[1]) for p in polygon]
     draw_hull(hull_points, c="red")
-    showText(f'Time Elapsed (Convex Hull): {end_time - start_time:.3f} sec')
+    print(f'Time Elapsed (Convex Hull): {end_time - start_time:.3f} sec')
 
     return hull_points
-
-
-def showHull(polygon, color):
-    draw_hull(polygon, color=color)
-    time.sleep(0.5)
-
-
-def showText(text):
-    print(text)
-
 
 def divide_and_conquer(points):
     if len(points) < 3:
@@ -196,7 +170,6 @@ def find_upper_tangent(left_hull, right_hull, left_start, right_start):
 
     while left or right:
         left, right = False, False
-
         while True:
             prev_i = (i - 1) % len(left_hull)
             new_slope = (right_hull[j][1] - left_hull[prev_i][1]) / (right_hull[j][0] - left_hull[prev_i][0])
@@ -206,7 +179,6 @@ def find_upper_tangent(left_hull, right_hull, left_start, right_start):
                 i = prev_i
             else:
                 break
-
         while True:
             next_j = (j + 1) % len(right_hull)
             new_slope = (right_hull[next_j][1] - left_hull[i][1]) / (right_hull[next_j][0] - left_hull[i][0])
@@ -216,7 +188,6 @@ def find_upper_tangent(left_hull, right_hull, left_start, right_start):
                 j = next_j
             else:
                 break
-
     return i, j
 
 def find_lower_tangent(left_hull, right_hull, left_start, right_start):
@@ -225,7 +196,6 @@ def find_lower_tangent(left_hull, right_hull, left_start, right_start):
 
     while left or right:
         left, right = False, False
-
         while True:
             next_i = (i + 1) % len(left_hull)
             new_slope = (right_hull[j][1] - left_hull[next_i][1]) / (right_hull[j][0] - left_hull[next_i][0])
@@ -235,7 +205,6 @@ def find_lower_tangent(left_hull, right_hull, left_start, right_start):
                 i = next_i
             else:
                 break
-
         while True:
             prev_j = (j - 1) % len(right_hull)
             new_slope = (right_hull[prev_j][1] - left_hull[i][1]) / (right_hull[prev_j][0] - left_hull[i][0])
@@ -245,7 +214,6 @@ def find_lower_tangent(left_hull, right_hull, left_start, right_start):
                 j = prev_j
             else:
                 break
-
     return i, j
 
 def construct_hull(left_hull, right_hull, upper, lower):

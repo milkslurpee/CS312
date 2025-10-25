@@ -49,7 +49,6 @@ def find_upper_tangent(left_hull, right_hull, left_start, right_start):
 
     while left or right:
         left, right = False, False
-
         while True:
             prev_i = (i - 1) % len(left_hull)
             new_slope = (right_hull[j][1] - left_hull[prev_i][1]) / (right_hull[j][0] - left_hull[prev_i][0])
@@ -59,7 +58,6 @@ def find_upper_tangent(left_hull, right_hull, left_start, right_start):
                 i = prev_i
             else:
                 break
-
         while True:
             next_j = (j + 1) % len(right_hull)
             new_slope = (right_hull[next_j][1] - left_hull[i][1]) / (right_hull[next_j][0] - left_hull[i][0])
@@ -69,7 +67,6 @@ def find_upper_tangent(left_hull, right_hull, left_start, right_start):
                 j = next_j
             else:
                 break
-
     return i, j
 
 def find_lower_tangent(left_hull, right_hull, left_start, right_start):
@@ -78,7 +75,6 @@ def find_lower_tangent(left_hull, right_hull, left_start, right_start):
 
     while left or right:
         left, right = False, False
-
         while True:
             next_i = (i + 1) % len(left_hull)
             new_slope = (right_hull[j][1] - left_hull[next_i][1]) / (right_hull[j][0] - left_hull[next_i][0])
@@ -88,7 +84,6 @@ def find_lower_tangent(left_hull, right_hull, left_start, right_start):
                 i = next_i
             else:
                 break
-
         while True:
             prev_j = (j - 1) % len(right_hull)
             new_slope = (right_hull[prev_j][1] - left_hull[i][1]) / (right_hull[prev_j][0] - left_hull[i][0])
@@ -98,7 +93,6 @@ def find_lower_tangent(left_hull, right_hull, left_start, right_start):
                 j = prev_j
             else:
                 break
-
     return i, j
 
 def construct_hull(left_hull, right_hull, upper, lower):
