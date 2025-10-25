@@ -4,8 +4,16 @@
 
 ### Design Discussion
 
-*Fill me in*
+I did my project with my brother Luke. 
 
+#### Discussion Points
+- We start by sorting the points by their x values
+- Then we recursively divide the plot into subplots
+- The base case is a plot of 2 points, we compute the convex hull; we connect the two points 
+- As we recurse back up we merge the two hulls
+  - find the common upper and lower tangents of the two hulls and draw a line between them
+  - get rid of inside lines from the two hulls
+- We think that's about it. It should leave us with a finished convex hull.
 ### Theoretical Analysis - Convex Hull Divide-and-Conquer
 
 #### Time 
@@ -20,7 +28,7 @@
 
 ### Design Discussion
 
-*Fill me in*
+My core test passed along with my baseline tests.
 
 ### Empirical Data - Convex Hull Divide-and-Conquer
 

@@ -1,6 +1,5 @@
 from generate import generate_random_points
 from test_utils import is_convex_hull, Timer
-
 from byu_pytest_utils import tier, with_import
 
 baseline = tier('basic', 1)

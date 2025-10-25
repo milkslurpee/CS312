@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="empirical analysis functions">
-      <change afterPath="$PROJECT_DIR$/Project2/Figure_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project2/Figure_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project2/OGSCCanalysis/empirical.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project2/OGanalysis/empirical.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project2/SCCanalysis/empirical.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project2/_analysis/empirical.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project2/_runtimes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project2/compute_coefficient.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project2/graphs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project2/plot_empirical_theoretical_compared.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project2/run_scc_analysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project2/scc-project-report.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project2/scc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project2/test_scc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project2/test_scc_results.html" afterDir="false" />
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="cleaning">
+      <change afterPath="$PROJECT_DIR$/Project4/this_is_cool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project4/convex-hull-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/convex-hull-project-report.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project4/test_convex_hull.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/test_convex_hull.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project4/test_convex_hull_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/test_convex_hull_results.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +78,10 @@
     "Python.plotting.executor": "Run",
     "Python.run_dijkstra_analysis.executor": "Run",
     "Python.run_scc_analysis.executor": "Run",
+    "Python.test_convex_hull.executor": "Run",
     "Python.test_rsa.executor": "Run",
     "Python.test_scc.executor": "Run",
+    "Python.this_is_cool.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -100,6 +92,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2" />
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project3" />
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project3\graphs" />
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc\OGanalysis" />
@@ -108,29 +101,7 @@
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_scc.py">
-    <configuration name="analyze_convex_hull" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CS312" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project4/analyze_convex_hull.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.this_is_cool">
     <configuration name="compute_coefficient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
@@ -153,7 +124,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="plot_empirical_theoretical_compared (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test_convex_hull" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -166,7 +137,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project4/plot_empirical_theoretical_compared.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project4/test_convex_hull.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,7 +146,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="plot_empirical_theoretical_compared" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="this_is_cool" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -184,17 +155,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project3/plot_empirical_theoretical_compared.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project4/this_is_cool.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_convex_hull.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="CS312" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Project4/test_convex_hull.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in test_scc.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -214,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_scc.py" />
-        <item itemvalue="Python.plot_empirical_theoretical_compared (1)" />
-        <item itemvalue="Python.plot_empirical_theoretical_compared" />
+        <item itemvalue="Python.this_is_cool" />
+        <item itemvalue="Python tests.Python tests in test_convex_hull.py" />
         <item itemvalue="Python.compute_coefficient" />
-        <item itemvalue="Python.analyze_convex_hull" />
+        <item itemvalue="Python.test_convex_hull" />
+        <item itemvalue="Python tests.Python tests in test_scc.py" />
       </list>
     </recent_temporary>
   </component>
@@ -397,7 +383,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761292966005</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="removed unnecessary directory">
+      <option name="closed" value="true" />
+      <created>1761294330184</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1761294330184</updated>
+    </task>
+    <task id="LOCAL-00022" summary="cleaning">
+      <option name="closed" value="true" />
+      <created>1761294418864</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1761294418864</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -430,6 +432,8 @@
     <MESSAGE value="Baseline + Core(but using built in PQ)" />
     <MESSAGE value="hello there stranger" />
     <MESSAGE value="empirical analysis functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="empirical analysis functions" />
+    <MESSAGE value="removed unnecessary directory" />
+    <MESSAGE value="cleaning" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaning" />
   </component>
 </project>
