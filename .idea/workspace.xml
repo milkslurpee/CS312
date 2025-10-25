@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="cleaning">
-      <change afterPath="$PROJECT_DIR$/Project4/this_is_cool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="generated cool visual file with gpt5. Writing report">
       <change beforePath="$PROJECT_DIR$/Project4/convex-hull-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/convex-hull-project-report.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project4/test_convex_hull.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/test_convex_hull.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project4/test_convex_hull_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/test_convex_hull_results.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +97,7 @@
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.this_is_cool">
+  <component name="RunManager" selected="Python tests.Python tests in test_convex_hull.py">
     <configuration name="compute_coefficient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
@@ -200,8 +196,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.this_is_cool" />
         <item itemvalue="Python tests.Python tests in test_convex_hull.py" />
+        <item itemvalue="Python.this_is_cool" />
         <item itemvalue="Python.compute_coefficient" />
         <item itemvalue="Python.test_convex_hull" />
         <item itemvalue="Python tests.Python tests in test_scc.py" />
@@ -399,7 +395,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761294418864</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="generated cool visual file with gpt5. Writing report">
+      <option name="closed" value="true" />
+      <created>1761414009424</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1761414009424</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,6 +438,7 @@
     <MESSAGE value="empirical analysis functions" />
     <MESSAGE value="removed unnecessary directory" />
     <MESSAGE value="cleaning" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaning" />
+    <MESSAGE value="generated cool visual file with gpt5. Writing report" />
+    <option name="LAST_COMMIT_MESSAGE" value="generated cool visual file with gpt5. Writing report" />
   </component>
 </project>

@@ -20,19 +20,9 @@ def compute_hull_dvcq(points: list[tuple[float, float]]) -> list[tuple[float, fl
 
     hull_points = [(p[0], p[1]) for p in polygon]
     draw_hull(hull_points, c="red")
-    showText(f'Time Elapsed (Convex Hull): {end_time - start_time:.3f} sec')
+    print(f'Time Elapsed (Convex Hull): {end_time - start_time:.3f} sec')
 
     return hull_points
-
-
-def showHull(polygon, color):
-    draw_hull(polygon, color=color)
-    time.sleep(0.5)
-
-
-def showText(text):
-    print(text)
-
 
 def divide_and_conquer(points):
     if len(points) < 3:
