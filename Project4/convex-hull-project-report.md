@@ -252,12 +252,12 @@ My core tests passed along with my baseline tests.
 ### Comparison of Theoretical and Empirical Results
 
 - Theoretical order of growth: O(nlogn)
-- Empirical order of growth (if different from theoretical): O((nlogn) / 12000)
+- Empirical order of growth (if different from theoretical): O((nlogn) / 7)
 
 ![img](original.svg)
 ![img](adjusted.svg)
 
-My theoretical runtime was much slower than the actual runtime, but by a constant factor of about 12 thousand. I assume this is just due to efficiencies in python interpreters.
+My theoretical runtime was a little slower than the actual runtime, but by a constant factor of about 7. I assume this is just due to efficiencies in the python interpreter. I think it still follows my theoretical order of growth. 
 
 ## Stretch 1
 
@@ -297,5 +297,5 @@ My theoretical runtime was much slower than the actual runtime, but by a constan
 
 ## Project Review
 
-*Fill me in*
+
 

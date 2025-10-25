@@ -5,10 +5,10 @@ from _runtimes import runtimes
 def main():
     # Theoretical time complexity: O(n log n)
     def theoretical_big_o(n):
-        return (n * np.log(n)) / 12000
+        return (n * np.log(n)) / 7
 
     # Coefficient from your analysis
-    coeff = 0.00400676965713501
+    coeff = 2.437744497868015e-06
 
     n_values = [n for n, _ in runtimes]
     times = [t for _, t in runtimes]
@@ -20,7 +20,7 @@ def main():
     plt.scatter(n_values, times, color='blue', label='Observed', zorder=3)
 
     # Plot theoretical curve
-    plt.plot(n_values, predicted_runtime, color='red', linestyle='--', label='Theoretical (n log n) / 12000', zorder=2)
+    plt.plot(n_values, predicted_runtime, color='red', linestyle='--', label='Theoretical (n log n) / 7', zorder=2)
 
     # Axis labels and title
     plt.xlabel('Number of Points (N)')

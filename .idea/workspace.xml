@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="removing redundant code">
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="more work on report + empirical graphs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project4/_analysis/empirical_convex_hull.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/original.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project4/adjusted.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project4/compute_coefficient.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/compute_coefficient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project4/convex-hull-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/convex-hull-project-report.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project4/convex_hull.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/convex_hull.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project4/original.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Project4/plot_empirical_theoretical_compared.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/plot_empirical_theoretical_compared.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project4/test_convex_hull_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/test_convex_hull_results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project4/this_is_cool.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/this_is_cool.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,9 +210,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.plot_empirical_theoretical_compared" />
+        <item itemvalue="Python.compute_coefficient" />
         <item itemvalue="Python.this_is_cool" />
         <item itemvalue="Python tests.Python tests in test_convex_hull.py" />
-        <item itemvalue="Python.compute_coefficient" />
         <item itemvalue="Python.test_convex_hull" />
       </list>
     </recent_temporary>
@@ -441,7 +440,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761415282463</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="more work on report + empirical graphs">
+      <option name="closed" value="true" />
+      <created>1761425737570</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1761425737570</updated>
+    </task>
+    <task id="LOCAL-00028" summary="more work on report + empirical graphs">
+      <option name="closed" value="true" />
+      <created>1761425750574</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1761425750574</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -479,6 +494,7 @@
     <MESSAGE value="generated cool visual file with gpt5. Writing report" />
     <MESSAGE value="cleaning stuff" />
     <MESSAGE value="removing redundant code" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing redundant code" />
+    <MESSAGE value="more work on report + empirical graphs" />
+    <option name="LAST_COMMIT_MESSAGE" value="more work on report + empirical graphs" />
   </component>
 </project>
