@@ -297,5 +297,10 @@ My theoretical runtime was a little slower than the actual runtime, but by a con
 
 ## Project Review
 
+I discussed the project with Luke
+We both sorted the initial points list with the python's built in sort function. Luke and I had different base cases. My base case is any plot of points less than 3 points, and luke recursed down to a single point. Luke also created classes to store points and hulls, where as I just used the tuples provided, and just used lists to store hulls inside of the functions. Luke's point class stores coordinates and next and previous pointers. Luke's Hull class stores 2 points, and those points point to other points along the hull. When Luke merges hulls, he just changes the previous and next pointers. Our find tangent functions are really similar, though I compute my previous and next points and Luke has pointers to his previous and next points. For merging hulls, I pass in the entire hull. Luke's points store pointers to other points, so he only needs to pass in the starting points.
 
+It was interesting to see how Luke did it, because we did our projects quite differently while they were still ultimately the same algorithm. Luke approached the project in a more spacial way that was a little easier to visualize. 
+
+Our runtimes were practically identical.
 

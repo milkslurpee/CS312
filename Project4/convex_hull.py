@@ -27,12 +27,10 @@ def divide_and_conquer(
     left_hull = divide_and_conquer(points[:mid])  # recursive calls
     right_hull = divide_and_conquer(points[mid:])
 
-    return merge_hulls(left_hull,
-                       right_hull)  # worst case scenario of merge is that all points are along the hull and must be considered O(n)
+    return merge_hulls(left_hull, right_hull)  # worst case scenario of merge is that all points are along the hull and must be considered O(n)
 
 
-def merge_hulls(left_hull,
-                right_hull):  # Worst case: all points are on the boundary (L + R) = O(n),  so merging is O(n)
+def merge_hulls(left_hull, right_hull):  # Worst case: all points are on the boundary (L + R) = O(n),  so merging is O(n)
 
     left_start = max(left_hull, key=lambda p: p[0])
     right_start = min(right_hull, key=lambda p: p[0])

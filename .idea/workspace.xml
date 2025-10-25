@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="more work on report + empirical graphs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project4/adjusted.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project4/compute_coefficient.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/compute_coefficient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project4/convex-hull-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/convex-hull-project-report.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project4/original.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project4/plot_empirical_theoretical_compared.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/plot_empirical_theoretical_compared.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project4/convex_hull.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/convex_hull.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -456,7 +453,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761425750574</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="more work on report + empirical graphs">
+      <option name="closed" value="true" />
+      <created>1761426642914</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1761426642914</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
