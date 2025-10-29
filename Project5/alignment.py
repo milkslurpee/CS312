@@ -23,7 +23,7 @@ def align(
     """
     len1 = len(seq1)
     len2 = len(seq2)
-    starting_array_val, starting_array_dir = compute_starting_arrays(seq1, seq2, len1, len2, indel_penalty)
+    starting_array_val, starting_array_dir = compute_starting_arrays(seq1, seq2, len1, len2, gap, indel_penalty)
     print(f"Starting array values for seq1='{seq1}', seq2='{seq2}':")
     for row in starting_array_val:
         # Format each cell to fixed width
@@ -57,18 +57,19 @@ def align(
         print(formatted_cells)
     print()
 
-    final_cost = finished_array_val[-1][-1]
+    final_strings = traceback
 
+    final_cost = finished_array_val[-1][-1]
 
     return final_cost, "", ""
 
 
-def compute_starting_arrays(seq1, seq2, len1, len2, indel_penalty):
+def compute_starting_arrays(seq1, seq2, len1, len2, gap, indel_penalty):
     matrix_val = [[''] * (len1 + 2) for _ in range(len2 + 2)]
     matrix_dir = [[''] * (len1 + 2) for _ in range(len2 + 2)]
-    matrix_val[0][0], matrix_dir[0][0] = '-', '-'
-    matrix_val[0][1], matrix_dir[0][1] = '-', '-'
-    matrix_val[1][0], matrix_dir[1][0] = '-', '-'
+    matrix_val[0][0], matrix_dir[0][0] = gap, gap
+    matrix_val[0][1], matrix_dir[0][1] = gap, gap
+    matrix_val[1][0], matrix_dir[1][0] = gap, gap
     matrix_val[1][1], matrix_dir[1][1] = 0, 'NA'
     insert_val_j = 0
     insert_val_i = 0
@@ -101,12 +102,16 @@ def compute_path(matrix_val, matrix_dir, len1, len2, match_award, indel_penalty,
                 matrix_dir[i+2][j+2] = 'D'
             elif min(Diagonal, Above, Left) == Above:
                 matrix_val[i+2][j+2] = Above
-                matrix_dir[i+2][j+2] = 'A'
+                matrix_dir[i+2][j+2] = 'U'
             elif min(Diagonal, Above, Left) == Left:
                 matrix_val[i+2][j+2] = Left
                 matrix_dir[i+2][j+2] = 'L'
     return matrix_val, matrix_dir
 
 
+def traceback(matrix_val, matrix_dir, len1, len2, gap):
+
+
+
 # Test with longer sequences
-align("ACGTACGT", "ACGTTGCA")
+align("ACGTACGT", "ACGTTG")
