@@ -57,11 +57,13 @@ def align(
         print(formatted_cells)
     print()
 
-    final_strings = traceback
+    string1, string2 = traceback(finished_array_dir, len1, len2, gap)
+    string1_str = ''.join(string1) if string1 is not None else None
+    string2_str = ''.join(string2) if string2 is not None else None
 
     final_cost = finished_array_val[-1][-1]
 
-    return final_cost, "", ""
+    return final_cost, string1_str, string2_str
 
 
 def compute_starting_arrays(seq1, seq2, len1, len2, gap, indel_penalty):
@@ -109,7 +111,27 @@ def compute_path(matrix_val, matrix_dir, len1, len2, match_award, indel_penalty,
     return matrix_val, matrix_dir
 
 
-def traceback(matrix_val, matrix_dir, len1, len2, gap):
+def traceback(matrix_dir, len1, len2, gap):
+    string1 = []
+    string2 = []
+
+    i, j = len2 + 1, len1 + 1
+    while i > 1 or j > 1:
+        if matrix_dir[i][j] == 'D':
+            string1.append(matrix_dir[0][j])
+            string2.append(matrix_dir[i][0])
+            i -= 1
+            j -= 1
+        elif matrix_dir[i][j] == 'U':
+            string1.append(gap)
+            string2.append(matrix_dir[i][0])
+            i -= 1
+        elif matrix_dir[i][j] == 'L':
+            string1.append(matrix_dir[0][j])
+            string2.append(gap)
+            j -= 1
+
+    return string1, string2
 
 
 
