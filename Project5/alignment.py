@@ -63,6 +63,10 @@ def align(
 
     final_cost = finished_array_val[-1][-1]
 
+
+    print(final_cost, '\n')
+    print(string1_str, '\n')
+    print(string2_str, '\n')
     return final_cost, string1_str, string2_str
 
 
