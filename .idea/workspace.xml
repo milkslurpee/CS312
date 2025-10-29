@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="starting traceback function">
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="done with baseline">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project5/alignment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project5/alignment.py" afterDir="false" />
     </list>
@@ -48,6 +48,7 @@
     "Python tests.Python tests for ConvexHull.test_convex_hull.test_uniform_distribution_small.executor": "Run",
     "Python tests.Python tests for Project3.test_dijkstras.test_tiny_network_linear_pq.executor": "Run",
     "Python tests.Python tests for Project3.test_dijkstras.test_very_large_network_linear_pq.executor": "Run",
+    "Python tests.Python tests for Project5.test_alignment.test_small_alignment.executor": "Run",
     "Python tests.Python tests for test_rsa.test_composites_miller_rabin.executor": "Run",
     "Python tests.Python tests for test_rsa.test_primes_fermat.executor": "Run",
     "Python tests.Python tests for test_scc.test_prepost.executor": "Run",
@@ -55,6 +56,7 @@
     "Python tests.Python tests in ConvexHull.executor": "Run",
     "Python tests.Python tests in Project4.executor": "Run",
     "Python tests.Python tests in project-scc.executor": "Run",
+    "Python tests.Python tests in test_alignment.py.executor": "Run",
     "Python tests.Python tests in test_convex_hull.py (1).executor": "Run",
     "Python tests.Python tests in test_convex_hull.py.executor": "Run",
     "Python tests.Python tests in test_dijkstras.py.executor": "Run",
@@ -100,29 +102,7 @@
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="compute_coefficient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CS312" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project4/compute_coefficient.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Python tests in test_alignment.py">
     <configuration name="plot_empirical_theoretical_compared" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
@@ -145,48 +125,49 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_convex_hull" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for Project5.test_alignment.test_small_alignment" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project4/test_convex_hull.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Project5.test_alignment.test_small_alignment&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="this_is_cool" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for Project5.test_alignment.test_tie_breaking" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project4/this_is_cool.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Project5.test_alignment.test_tie_breaking&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_alignment.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="CS312" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Project5/test_alignment.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in test_convex_hull.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -206,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_alignment.py" />
+        <item itemvalue="Python tests.Python tests for Project5.test_alignment.test_tie_breaking" />
+        <item itemvalue="Python tests.Python tests for Project5.test_alignment.test_small_alignment" />
         <item itemvalue="Python tests.Python tests in test_convex_hull.py" />
         <item itemvalue="Python.plot_empirical_theoretical_compared" />
-        <item itemvalue="Python.compute_coefficient" />
-        <item itemvalue="Python.this_is_cool" />
-        <item itemvalue="Python.test_convex_hull" />
       </list>
     </recent_temporary>
   </component>
@@ -477,7 +458,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761741293683</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="finishing traceback function">
+      <option name="closed" value="true" />
+      <created>1761742301144</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1761742301144</updated>
+    </task>
+    <task id="LOCAL-00033" summary="done with baseline">
+      <option name="closed" value="true" />
+      <created>1761742391929</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1761742391929</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -518,6 +515,8 @@
     <MESSAGE value="more work on report + empirical graphs" />
     <MESSAGE value="wrote a ton of project 5" />
     <MESSAGE value="starting traceback function" />
-    <option name="LAST_COMMIT_MESSAGE" value="starting traceback function" />
+    <MESSAGE value="finishing traceback function" />
+    <MESSAGE value="done with baseline" />
+    <option name="LAST_COMMIT_MESSAGE" value="done with baseline" />
   </component>
 </project>

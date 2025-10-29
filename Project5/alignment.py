@@ -95,21 +95,21 @@ def compute_path(matrix_val, matrix_dir, len1, len2, match_award, indel_penalty,
             choices = []
             if matrix_val[0][j+2] == matrix_val[i+2][0]:
                 Diagonal = matrix_val[i+1][j+1] + match_award
-                choices.append(Diagonal)
             else:
                 Diagonal = matrix_val[i+1][j+1] + sub_penalty
-                choices.append(Diagonal)
-            Above = matrix_val[i+2][j+1] + indel_penalty
+            choices.append(Diagonal)
+            Above = matrix_val[i+1][j+2] + indel_penalty
             choices.append(Above)
-            Left = matrix_val[i+1][j+2] + indel_penalty
+            Left = matrix_val[i+2][j+1] + indel_penalty
             choices.append(Left)
-            if min(Diagonal, Above, Left) == Diagonal:
+            min_score = min(choices)
+            if min_score == Diagonal:
                 matrix_val[i+2][j+2] = Diagonal
                 matrix_dir[i+2][j+2] = 'D'
-            elif min(Diagonal, Above, Left) == Above:
+            elif min_score == Above:
                 matrix_val[i+2][j+2] = Above
                 matrix_dir[i+2][j+2] = 'U'
-            elif min(Diagonal, Above, Left) == Left:
+            elif min_score == Left:
                 matrix_val[i+2][j+2] = Left
                 matrix_dir[i+2][j+2] = 'L'
     return matrix_val, matrix_dir
@@ -134,7 +134,13 @@ def traceback(matrix_dir, len1, len2, gap):
             string1.append(matrix_dir[0][j])
             string2.append(gap)
             j -= 1
-
+        else:
+            string1.append(gap)
+            string2.append(gap)
+            i -= 1
+            j -= 1
+    string1.reverse()
+    string2.reverse()
     return string1, string2
 
 
