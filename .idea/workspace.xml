@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="more work on report + empirical graphs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project4/convex-hull-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/convex-hull-project-report.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project4/convex_hull.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/convex_hull.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project4/test_convex_hull_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project4/test_convex_hull_results.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +61,7 @@
     "Python tests.Python tests in test_rsa.py.executor": "Run",
     "Python tests.Python tests in test_scc.py.executor": "Run",
     "Python.EnDecrypt.executor": "Run",
+    "Python.alignment.executor": "Run",
     "Python.analyze_convex_hull.executor": "Run",
     "Python.benchmark.executor": "Run",
     "Python.benchmark2.executor": "Run",
@@ -100,7 +100,7 @@
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.plot_empirical_theoretical_compared">
+  <component name="RunManager">
     <configuration name="compute_coefficient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
@@ -206,10 +206,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_convex_hull.py" />
         <item itemvalue="Python.plot_empirical_theoretical_compared" />
         <item itemvalue="Python.compute_coefficient" />
         <item itemvalue="Python.this_is_cool" />
-        <item itemvalue="Python tests.Python tests in test_convex_hull.py" />
         <item itemvalue="Python.test_convex_hull" />
       </list>
     </recent_temporary>
