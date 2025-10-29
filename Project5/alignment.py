@@ -31,27 +31,10 @@ def align(
         print(formatted_cells)
     print()
 
-
-
-    print(f"Starting array directions for seq1='{seq1}', seq2='{seq2}':")
-    for row in starting_array_dir:
-        # Format each cell to fixed width
-        formatted_cells = [f"{str(cell):>4}" for cell in row]
-        print(formatted_cells)
-    print()
-
-
     finished_array_val, finished_array_dir = compute_path(starting_array_val, starting_array_dir, len1, len2, match_award, indel_penalty, sub_penalty)
 
     print(f"finished array vals for seq1='{seq1}', seq2='{seq2}':")
     for row in finished_array_val:
-        # Format each cell to fixed width
-        formatted_cells = [f"{str(cell):>4}" for cell in row]
-        print(formatted_cells)
-    print()
-
-    print(f"finished array directions for seq1='{seq1}', seq2='{seq2}':")
-    for row in finished_array_dir:
         # Format each cell to fixed width
         formatted_cells = [f"{str(cell):>4}" for cell in row]
         print(formatted_cells)
