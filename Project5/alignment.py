@@ -225,7 +225,7 @@ def compute_banded_path(seq1, seq2, len1, len2, match_award, indel_penalty, sub_
     # ---------------------------
     # Return dummy lambda to preserve original function signature compatibility
     return matrix_val, matrix_dir, (lambda i, j: j - (i - band))
-
+nm,
 
 
 def traceback(seq1, seq2, matrix_dir, len1, len2, gap, banded=False, col_index=None, band=None):

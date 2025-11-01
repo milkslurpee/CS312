@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="done with core">
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="beans">
       <change beforePath="$PROJECT_DIR$/Project5/alignment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project5/alignment.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -491,7 +491,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762007386009</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="beans">
+      <option name="closed" value="true" />
+      <created>1762007482559</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1762007482559</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -509,7 +517,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/Project1/project-rsa" />
     </ignored-roots>
-    <MESSAGE value="finished project 1 w/ report" />
     <MESSAGE value="added project 2 (scc) to repository" />
     <MESSAGE value="passed baseline and got empirical data" />
     <MESSAGE value="added figure 1" />
@@ -534,6 +541,7 @@
     <MESSAGE value="cleaning" />
     <MESSAGE value="progress on core" />
     <MESSAGE value="done with core" />
-    <option name="LAST_COMMIT_MESSAGE" value="done with core" />
+    <MESSAGE value="beans" />
+    <option name="LAST_COMMIT_MESSAGE" value="beans" />
   </component>
 </project>
