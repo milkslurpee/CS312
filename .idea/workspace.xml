@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="progress on core">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="done with core">
       <change beforePath="$PROJECT_DIR$/Project5/alignment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project5/alignment.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -484,7 +483,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761800905451</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="done with core">
+      <option name="closed" value="true" />
+      <created>1762007386009</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1762007386009</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -502,7 +509,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/Project1/project-rsa" />
     </ignored-roots>
-    <MESSAGE value="test git" />
     <MESSAGE value="finished project 1 w/ report" />
     <MESSAGE value="added project 2 (scc) to repository" />
     <MESSAGE value="passed baseline and got empirical data" />
@@ -527,6 +533,7 @@
     <MESSAGE value="done with baseline" />
     <MESSAGE value="cleaning" />
     <MESSAGE value="progress on core" />
-    <option name="LAST_COMMIT_MESSAGE" value="progress on core" />
+    <MESSAGE value="done with core" />
+    <option name="LAST_COMMIT_MESSAGE" value="done with core" />
   </component>
 </project>

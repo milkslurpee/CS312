@@ -127,12 +127,12 @@ def compute_banded_path(seq1, seq2, len1, len2, match_award, indel_penalty, sub_
     Returns:
         matrix_val: 2D list of DP costs (shape = [len2+1][2*band+1])
         matrix_dir: 2D list of directions ('D', 'U', 'L', 'NA')
-        col_index:  helper function mapping absolute j index to band column
+        col_index:  dummy lambda (for compatibility with caller)
     """
 
     INF = float('inf')
     band = banded_width
-    band_width = 2 * band + 1  # total number of columns per row in banded matrix
+    band_width = 2 * band + 1  # number of columns per row
 
     # ---------------------------
     # 0. Early Exit: impossible alignment
@@ -140,7 +140,7 @@ def compute_banded_path(seq1, seq2, len1, len2, match_award, indel_penalty, sub_
     if abs(len1 - len2) > band:
         dummy_val = [[INF] * band_width for _ in range(len2 + 1)]
         dummy_dir = [[''] * band_width for _ in range(len2 + 1)]
-        dummy_col_index = lambda i, j: 0
+        dummy_col_index = lambda i, j: 0  # compatibility
         return dummy_val, dummy_dir, dummy_col_index
 
     # ---------------------------
@@ -149,35 +149,26 @@ def compute_banded_path(seq1, seq2, len1, len2, match_award, indel_penalty, sub_
     matrix_val = [[INF] * band_width for _ in range(len2 + 1)]
     matrix_dir = [[''] * band_width for _ in range(len2 + 1)]
 
-    # Helper: convert (i, j) → column index within the banded row
-    def col_index(i, j):
-        """
-        Map an absolute matrix coordinate (i, j) to its column in the banded representation.
-        When i == j, we’re on the main diagonal → col = band.
-        """
-        return j - (i - band)
-
     # ---------------------------
     # 2. Initialize Top-left Corner
     # ---------------------------
-    matrix_val[0][band] = 0
-    matrix_dir[0][band] = 'NA'  # starting point
+    center_col = band  # main diagonal (i == j)
+    matrix_val[0][center_col] = 0
+    matrix_dir[0][center_col] = 'NA'
 
     # ---------------------------
     # 3. Initialize First Row (i = 0)
     # ---------------------------
-    # Filling gaps in seq2 — moving rightwards along top row
     for j in range(1, min(len1, band) + 1):
-        col = col_index(0, j)
+        col = j - (0 - band)  # inline col_index(0, j)
         matrix_val[0][col] = j * indel_penalty
         matrix_dir[0][col] = 'L'
 
     # ---------------------------
     # 4. Initialize First Column (j = 0)
     # ---------------------------
-    # Filling gaps in seq1 — moving down along first column
     for i in range(1, min(len2, band) + 1):
-        col = col_index(i, 0)
+        col = 0 - (i - band)  # inline col_index(i, 0)
         matrix_val[i][col] = i * indel_penalty
         matrix_dir[i][col] = 'U'
 
@@ -185,24 +176,21 @@ def compute_banded_path(seq1, seq2, len1, len2, match_award, indel_penalty, sub_
     # 5. Main DP Loop
     # ---------------------------
     for i in range(1, len2 + 1):
-
-        # Only compute cells within band boundaries
         j_start = max(1, i - band)
         j_end = min(len1, i + band)
 
         for j in range(j_start, j_end + 1):
-            col = col_index(i, j)
+            col = j - (i - band)  # inline col_index(i, j)
 
-            # Skip if outside the band (safety check)
             if not (0 <= col < band_width):
-                continue
+                continue  # skip if outside the band
 
             best_cost = INF
             best_dir = ''
 
-            # --- Option 1: Diagonal (Match/Mismatch) ---
+            # --- Diagonal (Match/Mismatch) ---
             if j > 0 and abs((j - 1) - (i - 1)) <= band:
-                diag_col = col_index(i - 1, j - 1)
+                diag_col = (j - 1) - ((i - 1) - band)
                 if 0 <= diag_col < band_width:
                     diag_score = match_award if seq1[j - 1] == seq2[i - 1] else sub_penalty
                     cost_diag = matrix_val[i - 1][diag_col] + diag_score
@@ -210,32 +198,33 @@ def compute_banded_path(seq1, seq2, len1, len2, match_award, indel_penalty, sub_
                         best_cost = cost_diag
                         best_dir = 'D'
 
-            # --- Option 2: Up (Gap in seq1) ---
+            # --- Up (Gap in seq1) ---
             if abs(j - (i - 1)) <= band:
-                up_col = col_index(i - 1, j)
+                up_col = j - ((i - 1) - band)
                 if 0 <= up_col < band_width:
                     cost_up = matrix_val[i - 1][up_col] + indel_penalty
                     if cost_up < best_cost:
                         best_cost = cost_up
                         best_dir = 'U'
 
-            # --- Option 3: Left (Gap in seq2) ---
+            # --- Left (Gap in seq2) ---
             if j > 0 and abs((j - 1) - i) <= band:
-                left_col = col_index(i, j - 1)
+                left_col = (j - 1) - (i - band)
                 if 0 <= left_col < band_width:
                     cost_left = matrix_val[i][left_col] + indel_penalty
                     if cost_left < best_cost:
                         best_cost = cost_left
                         best_dir = 'L'
 
-            # Store best value and direction
+            # Store result
             matrix_val[i][col] = best_cost
             matrix_dir[i][col] = best_dir
 
     # ---------------------------
     # 6. Return Results
     # ---------------------------
-    return matrix_val, matrix_dir, col_index
+    # Return dummy lambda to preserve original function signature compatibility
+    return matrix_val, matrix_dir, (lambda i, j: j - (i - band))
 
 
 
