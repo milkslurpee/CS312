@@ -25,49 +25,16 @@ def align(
     len2 = len(seq2)
     #if banded_width == -1:  # baseline
     starting_array_val, starting_array_dir = compute_starting_arrays(seq1, seq2, len1, len2, gap, indel_penalty)
-    finished_array_val, finished_array_dir = compute_path(starting_array_val, starting_array_dir, len1, len2,
-                                                              match_award, indel_penalty, sub_penalty)
+    finished_array_val, finished_array_dir = compute_path(starting_array_val, starting_array_dir, len1, len2, match_award, indel_penalty, sub_penalty)
     final_cost = finished_array_val[-1][-1]
 
     if final_cost == float('inf'):
         return final_cost, None, None
 
     string1, string2 = traceback(finished_array_dir, len1, len2, gap)
-
-    #else:  # core - MODIFIED to use compact banded matrix
-
-        # compute_banded_path now returns the compact matrix and the col_index function
-        #finished_array_val, finished_array_dir, col_index = compute_banded_path(seq1, seq2, len1, len2, match_award, indel_penalty, sub_penalty, banded_width)
-
-       # band = banded_width
-
-        # Calculate final cost
-        # if abs(len1 - len2) <= band:
-        #     col = col_index(len2, len1)
-        #     # The bottom-right cell is matrix_val[len2][col]
-        #     final_cost = finished_array_val[len2][col]
-        # else:
-        #     # This path is hit if the early exit in compute_banded_path didn't catch it
-        #     final_cost = float('inf')
-        #
-        # if final_cost == float('inf'):
-        #     return final_cost, None, None
-        #
-        # # Call the banded traceback function
-        # band = banded_width
-        # string1, string2 = traceback(
-        #     seq1, seq2, finished_array_dir, len1, len2, gap,
-        #     banded=True,
-        #     col_index=(lambda i, j: j - (i - band)),
-        #     band=band
-        # )
-
     string1_str = ''.join(string1) if string1 is not None else None
     string2_str = ''.join(string2) if string2 is not None else None
 
-    # print(final_cost, '\n')
-    # print(string1_str, '\n')
-    # print(string2_str, '\n')
     return final_cost, string1_str, string2_str
 
 
