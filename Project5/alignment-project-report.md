@@ -4,7 +4,7 @@
 
 ### Design Experience
 
-I talked about my design with my brother Jack
+I talked about my design with my brother Luke
 
 Discussion points
 
