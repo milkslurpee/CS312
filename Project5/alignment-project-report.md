@@ -133,7 +133,7 @@ def traceback(matrix_dir, len1, len2, gap):
     return string1, string2
 ```
 
-The Time Complexity of align() is O(n * m). I generated 2 arrays of n * m size and then iterated through each value to compute edit distances and directions. The traceback is determined by the maximum value between the two sequences O(n) or O(m). This is dominated by O(n * m).
+The Time Complexity of align() is **O(n * m)**. I generated 2 arrays of n * m size and then iterated through each value to compute edit distances and directions. The traceback is determined by the maximum value between the two sequences O(n) or O(m). This is dominated by O(n * m).
 
 #### Space
 
@@ -251,9 +251,11 @@ def traceback(matrix_dir, len1, len2, gap):                 #O(n + m)
     return string1, string2
 ```
 
-The space complexity of align() is also O(n * m). This because we have to store two arrays, both of size O(n * m). we can get rid of the constant factor of 2. After that, all computations are only updating values in these array, so no more space is required. The traceback function does require us to store the two strings with their final alignment, so that is O(n + m), but that is dominated by O(n * m).
+The space complexity of align() is also **O(n * m)**. This because we have to store two arrays, both of size O(n * m). we can get rid of the constant factor of 2. After that, all computations are only updating values in these array, so no more space is required. The traceback function does require us to store the two strings with their final alignment, so that is O(n + m), but that is dominated by O(n * m).
 
 ### Empirical Data - Unrestricted Alignment
+
+For empirical analysis, I'm just going to assume m and n have the same length (n), so O(n*m) is just O(n^2)
 
 | N    | time (ms) |
 |------|-----------|
@@ -268,13 +270,12 @@ The space complexity of align() is also O(n * m). This because we have to store 
 
 ### Comparison of Theoretical and Empirical Results - Unrestricted Alignment
 
-- Theoretical order of growth: O(n * m)
-- Empirical order of growth (if different from theoretical): 
+- Theoretical order of growth: O(n*m) -> O(n^2)
+- Empirical order of growth (if different from theoretical): It matched pretty much perfectly
 
+![img](Figure_1.png)
 
-![](fill-me-in.png)
-
-*Fill me in*
+The theoretical order of growth matched my empirical nearly perfectly. There was a little hitch around 2500, but other than that it was basically identical.
 
 ## Core
 
@@ -355,4 +356,6 @@ The space complexity of align() is also O(n * m). This because we have to store 
 
 ## Project Review
 
-*Fill me in*
+I compared my project with my brother Luke who is in this class
+
+Luke and I did this project way differently. In our create matrix function, I created 2 matrices (one for scores and the other for directions). Luke created one matrix and had each element store a tuple with both a score and direction. I stored the sequences inside of my arrays as well, which allowed me to access sequence values from within the matrix. Luke passed the sequence values into all of his functions. In our compute path functions, Luke computed the values recursively, whereas I did it iteratively. Our traceback function are very similar, but we used different methods of bound checking. My runtimes were a bit faster than Luke's. Luke's runtimes were consistantly about 3 times slower than mine, we think it was due to his use of recursion. It was a cool comparison since we did them so differently.
