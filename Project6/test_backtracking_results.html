@@ -145,7 +145,7 @@
         </header>
         <main class="main-content">
             <div class="test-summary">
-                <span>Passed: 1 / 3</span>
+                <span>Passed: 2 / 3</span>
                 <span>Total Score: 0 / 0</span>
             </div>
             
@@ -191,13 +191,13 @@
                 </div>
             </div>
             
-            <div class="test-result-failed">
+            <div class="test-result-passed">
                 <div class="content-wrapper">
                     <div class="result-header">
                         <h2>core</h2>
                         <div class="result-subheader">
                             <div class="status">
-                                <h2>Failed</h2>
+                                <h2>Passed</h2>
                             </div>
                             <div class="score">
                                 <h2>Score:</h2> 0 / 0
@@ -208,135 +208,19 @@
                     <ul class="test-info">
                     
                         
-                            <li class="fail">test_tiny_backtracking — Fail</li>
-                            
-                                <pre class="failure-output">@core
-    def test_tiny_backtracking():
-        graph = [
-            [0, 9, inf, 8, inf],
-            [inf, 0, 4, inf, 2],
-            [inf, 3, 0, 4, inf],
-            [inf, 6, 7, 0, 12],
-            [1, inf, inf, 10, 0]
-        ]
-        timer = Timer(10)
-        stats = backtracking(graph, timer)
->       assert_valid_tours(graph, stats)
-
-Project6\test_backtracking.py:126: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-
-edges = [[0, 9, inf, 8, inf], [inf, 0, 4, inf, 2], [inf, 3, 0, 4, inf], [inf, 6, 7, 0, 12], [1, inf, inf, 10, 0]]
-stats = []
-
-    def assert_valid_tours(edges, stats):
->       assert len(stats) > 0
-E       assert 0 > 0
-E        +  where 0 = len([])
-
-Project6\test_utils.py:18: AssertionError</pre>
-                            
+                            <li class="pass">test_tiny_backtracking — Pass</li>
                         
                     
                         
-                            <li class="fail">test_small_backtracking — Fail</li>
-                            
-                                <pre class="failure-output">@core
-    def test_small_backtracking():
-        locations, edges = generate_network(
-            8,
-            euclidean=True,
-            reduction=0.2,
-            normal=False,
-            seed=312,
-        )
-    
-        timer = Timer(30)
-        stats = backtracking(edges, timer)
-        assert not timer.time_out()
->       assert_valid_tours(edges, stats)
-
-Project6\test_backtracking.py:145: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-
-edges = [[inf, 0.8, 0.564, 0.219, 0.318, 0.595, ...], [0.8, inf, inf, 0.717, 1.08, inf, ...], [0.564, 0.94, inf, 0.377, 0.497,...377, 0.0, 0.374, 0.456, ...], [0.318, 1.08, 0.497, 0.374, 0.0, inf, ...], [inf, 0.3, 0.64, 0.456, 0.83, 0.0, ...], ...]
-stats = []
-
-    def assert_valid_tours(edges, stats):
->       assert len(stats) > 0
-E       assert 0 > 0
-E        +  where 0 = len([])
-
-Project6\test_utils.py:18: AssertionError</pre>
-                            
+                            <li class="pass">test_small_backtracking — Pass</li>
                         
                     
                         
-                            <li class="fail">test_medium_backtracking — Fail</li>
-                            
-                                <pre class="failure-output">@core
-    def test_medium_backtracking():
-        locations, edges = generate_network(
-            10,
-            euclidean=True,
-            reduction=0.5,
-            normal=False,
-            seed=312
-        )
-    
-        timer = Timer(30)
-    
-        stats = backtracking(edges, timer)
-    
->       assert_valid_tours(edges, stats)
-
-Project6\test_backtracking.py:165: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-
-edges = [[inf, inf, inf, 0.219, inf, inf, ...], [0.8, 0.0, 0.94, 0.717, inf, 0.3, ...], [0.564, 0.94, 0.0, 0.377, inf, inf, ....., 0.377, inf, 0.374, 0.456, ...], [inf, 1.08, 0.497, 0.374, 0.0, inf, ...], [inf, inf, 0.64, inf, 0.83, inf, ...], ...]
-stats = []
-
-    def assert_valid_tours(edges, stats):
->       assert len(stats) > 0
-E       assert 0 > 0
-E        +  where 0 = len([])
-
-Project6\test_utils.py:18: AssertionError</pre>
-                            
+                            <li class="pass">test_medium_backtracking — Pass</li>
                         
                     
                         
-                            <li class="fail">test_large_backtracking — Fail</li>
-                            
-                                <pre class="failure-output">@core
-    def test_large_backtracking():
-        locations, edges = generate_network(
-            14,
-            euclidean=True,
-            reduction=0,
-            normal=False,
-            seed=312
-        )
-    
-        timer = Timer(30)
-    
-        stats = backtracking(edges, timer)
-    
->       assert_valid_tours(edges, stats)
-
-Project6\test_backtracking.py:184: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-
-edges = [[0.0, 0.8, 0.564, 0.219, 0.318, 0.595, ...], [0.8, 0.0, 0.94, 0.717, 1.08, 0.3, ...], [0.564, 0.94, 0.0, 0.377, 0.497..., 0.0, 0.374, 0.456, ...], [0.318, 1.08, 0.497, 0.374, 0.0, 0.83, ...], [0.595, 0.3, 0.64, 0.456, 0.83, 0.0, ...], ...]
-stats = []
-
-    def assert_valid_tours(edges, stats):
->       assert len(stats) > 0
-E       assert 0 > 0
-E        +  where 0 = len([])
-
-Project6\test_utils.py:18: AssertionError</pre>
-                            
+                            <li class="pass">test_large_backtracking — Pass</li>
                         
                     
                     </ul>
@@ -358,7 +242,77 @@ Project6\test_utils.py:18: AssertionError</pre>
                         </div>
                     </div>
                     
-                        <div class="blocked-message">Tests for this tier will run when all prerequisite tiers have passed.</div>
+                    <ul class="test-info">
+                    
+                        
+                            <li class="fail">test_smaller_backtracking_with_bssf — Fail</li>
+                            
+                                <pre class="failure-output">@stretch1
+    def test_smaller_backtracking_with_bssf():
+        locations, edges = generate_network(
+            12,
+            euclidean=True,
+            reduction=0,
+            normal=False,
+            seed=3,
+        )
+    
+        backtracking_bssf_timer = Timer(30)
+        stats_bssf_backtracking = backtracking_bssf(edges, backtracking_bssf_timer)
+        assert backtracking_bssf_timer.time() < 35
+    
+>       assert_valid_tours(edges, stats_bssf_backtracking)
+
+Project6\test_backtracking.py:206: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+edges = [[0.0, 0.145, 0.616, 0.369, 0.311, 0.761, ...], [0.145, 0.0, 0.596, 0.426, 0.386, 0.64, ...], [0.616, 0.596, 0.0, 0.98..., 0.651, 1.049, ...], [0.311, 0.386, 0.403, 0.651, 0.0, 0.773, ...], [0.761, 0.64, 0.548, 1.049, 0.773, 0.0, ...], ...]
+stats = []
+
+    def assert_valid_tours(edges, stats):
+>       assert len(stats) > 0
+E       assert 0 > 0
+E        +  where 0 = len([])
+
+Project6\test_utils.py:18: AssertionError</pre>
+                            
+                        
+                    
+                        
+                            <li class="fail">test_medium_backtracking_with_bssf — Fail</li>
+                            
+                                <pre class="failure-output">@stretch1
+    def test_medium_backtracking_with_bssf():
+        locations, edges = generate_network(
+            15,
+            euclidean=True,
+            reduction=0.2,
+            normal=False,
+            seed=312,
+        )
+    
+        backtracking_bssf_timer = Timer(30)
+        stats_bssf_backtracking = backtracking_bssf(edges, backtracking_bssf_timer)
+        assert backtracking_bssf_timer.time() < 35
+    
+>       assert_valid_tours(edges, stats_bssf_backtracking)
+
+Project6\test_backtracking.py:223: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+edges = [[0.0, 0.8, 0.564, 0.219, inf, 0.595, ...], [0.8, 0.0, 0.94, 0.717, 1.08, 0.3, ...], [0.564, 0.94, 0.0, 0.377, 0.497, ...nf, 0.0, 0.374, inf, ...], [0.318, 1.08, 0.497, 0.374, 0.0, 0.83, ...], [0.595, 0.3, 0.64, 0.456, 0.83, 0.0, ...], ...]
+stats = []
+
+    def assert_valid_tours(edges, stats):
+>       assert len(stats) > 0
+E       assert 0 > 0
+E        +  where 0 = len([])
+
+Project6\test_utils.py:18: AssertionError</pre>
+                            
+                        
+                    
+                    </ul>
                     
                 </div>
             </div>
@@ -366,7 +320,7 @@ Project6\test_utils.py:18: AssertionError</pre>
             
         </main>
         <footer>
-            <p>Generated by byu_pytest_utils on November 22, 2025 03:34 AM</p>
+            <p>Generated by byu_pytest_utils on November 22, 2025 06:31 AM</p>
         </footer>
     </div>
 </body>

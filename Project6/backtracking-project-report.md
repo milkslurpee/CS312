@@ -4,7 +4,7 @@
 
 ### Design Experience
 
-I did my design experience with Luke
+I did my design experience with my brother Luke
 - For baseline we are going to run a for loop to loop through all the cities; These will be the starting points.
 - From each starting city, we will continuously pick the nearest city until we either find a solution, reach a dead end, or the timer runs out
 - After finding our first solution, we will kill any paths that have a greater cost than that solution. If we find a cheaper solution, then we will append that solution to the list of solutions.
@@ -44,7 +44,13 @@ I did my design experience with Luke
 
 ### Design Experience
 
-*Fill me in*
+I did my design experience with Luke
+- We will start by putting the starting city on the stack
+- Then we'll start the loop that runs while the stack isn't empty and the timer hasnt run out
+- In the loop we pop the path (the starting city on first iteration) and expand all children paths that haven't already been expanded
+- If there is no solution, push that path back onto the stack
+- If there is a solution AND it's the new cheapest solution, then add it to the list of solutions
+- Return the list of solutions
 
 ### Theoretical Analysis - Backtracking
 
