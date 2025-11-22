@@ -152,7 +152,7 @@ The Space complexity is O(n^2). The stats list stores a list of tours, and has a
 | 50  | 0.0       | 26.62     |
 
 ### Comparison of Theoretical and Empirical Results - Greedy
-![img](_analysis/greedy.svg)
+![img](greedy.svg)
 
 - Theoretical order of growth: n^3
 - Empirical order of growth (if different from theoretical): 
@@ -292,7 +292,7 @@ Space complexity is O(n^2) because only 2 nodes (the parent and child) will be e
 
 ### Comparison of Theoretical and Empirical Results - Backtracking
 
-![img](_analysis/backtracking.svg)
+![img](backtracking.svg)
 
 - Theoretical order of growth: n!
 - Empirical order of growth (if different from theoretical): 
