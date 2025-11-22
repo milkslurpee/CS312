@@ -75,7 +75,7 @@ if __name__ == '__main__':
 
     main(
         15,
-        random_tour,
+        #random_tour,
         greedy_tour,
         backtracking,
         # backtracking_bssf,

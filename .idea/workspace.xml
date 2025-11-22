@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="finished baseline">
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="finished core">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project6/_runtimes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/_runtimes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project6/analyze_backtracking.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Project6/backtracking-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/backtracking-project-report.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project6/test_backtracking_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/test_backtracking_results.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project6/tsp_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/tsp_run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project6/tsp_solve_backtracking.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/tsp_solve_backtracking.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +70,7 @@
     "Python.EnDecrypt.executor": "Run",
     "Python.alignment.executor": "Run",
     "Python.analyze_alignment_runtimes.executor": "Run",
+    "Python.analyze_backtracking.executor": "Run",
     "Python.analyze_backtracking_runtimes.executor": "Run",
     "Python.analyze_convex_hull.executor": "Run",
     "Python.benchmark.executor": "Run",
@@ -98,12 +99,13 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Stuff/Homework/Fall2025/CS312",
+    "last_opened_file_path": "C:/Stuff/Homework/Fall2025/CS312/Project6",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Stuff\Homework\Fall2025\CS312\Project6" />
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2" />
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project3" />
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project3\graphs" />
@@ -114,7 +116,7 @@
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.analyze_backtracking">
+  <component name="RunManager" selected="Python.plot_empirical_theoretical_compared">
     <configuration name="analyze_backtracking" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
@@ -137,7 +139,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="analyze_backtracking_runtimes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="compute_coefficient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,7 +152,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project6/analyze_backtracking_runtimes.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project6/compute_coefficient.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,7 +161,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cuttree" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="plot_empirical_theoretical_compared" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -172,7 +174,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project6/cuttree.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project6/plot_empirical_theoretical_compared.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,7 +183,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tsp_plot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="tsp_full_details" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -194,7 +196,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project6/tsp_plot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project6/tsp_full_details.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -227,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.analyze_backtracking" />
-        <item itemvalue="Python.analyze_backtracking_runtimes" />
-        <item itemvalue="Python.cuttree" />
-        <item itemvalue="Python.tsp_plot" />
+        <item itemvalue="Python.plot_empirical_theoretical_compared" />
+        <item itemvalue="Python.compute_coefficient" />
         <item itemvalue="Python.tsp_run" />
+        <item itemvalue="Python.analyze_backtracking" />
+        <item itemvalue="Python.tsp_full_details" />
       </list>
     </recent_temporary>
   </component>
@@ -602,7 +604,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763807960203</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="finished core">
+      <option name="closed" value="true" />
+      <created>1763821929848</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1763821929848</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -620,7 +630,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/Project1/project-rsa" />
     </ignored-roots>
-    <MESSAGE value="finished core + report" />
     <MESSAGE value="touch ups" />
     <MESSAGE value="resubmission" />
     <MESSAGE value="Project 3 init" />
@@ -645,6 +654,7 @@
     <MESSAGE value="finished" />
     <MESSAGE value="added project 6" />
     <MESSAGE value="finished baseline" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished baseline" />
+    <MESSAGE value="finished core" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished core" />
   </component>
 </project>
