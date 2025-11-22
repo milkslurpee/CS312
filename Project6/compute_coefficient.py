@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from _runtimes import runtimes
+from backtracking_runtimes import runtimes
 import numpy as np
 import math
 
@@ -12,7 +12,7 @@ def compute_coefficient(observed_performance, theoretical_order):
 
 def main():
     def theoretical_big_o(n):
-        return (n*n*n)
+        return math.factorial(n)
 
     coeffs = compute_coefficient(runtimes, theoretical_big_o)
 

@@ -115,7 +115,7 @@ def backtracking(edges: list[list[float]], timer: Timer) -> list[SolutionStats]:
     stack = [[0]]
     stats = []
     best_score = math.inf
-    while stack and not timer.time_out():
+    while stack and not timer.time_out():       #O(n^2) the stack can
         tour = stack.pop()
         previous = tour[-1]
 
@@ -144,7 +144,17 @@ def backtracking(edges: list[list[float]], timer: Timer) -> list[SolutionStats]:
             new_path.append(neighboring_city)
             stack.append(new_path)
 
-    return stats
+    if stats: return stats
+    else:   return [SolutionStats(
+            [],
+            math.inf,
+            timer.time(),
+            1,
+            0,
+            0,
+            0,
+            0
+        )]
 
 def backtracking_bssf(edges: list[list[float]], timer: Timer) -> list[SolutionStats]:
     return []

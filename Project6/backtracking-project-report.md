@@ -155,7 +155,9 @@ The Space complexity is O(n^2). The stats list stores a list of tours, and has a
 ![img](_analysis/greedy.svg)
 
 - Theoretical order of growth: n^3
-- Empirical order of growth (if different from theoretical): It matches the theoretical pretty closely.
+- Empirical order of growth (if different from theoretical): 
+
+The empirical data match the theoretical pretty closely.
 
 ## Core
 
@@ -178,12 +180,12 @@ def backtracking(edges: list[list[float]], timer: Timer) -> list[SolutionStats]:
     stack = [[0]]
     stats = []
     best_score = math.inf
-    while stack and not timer.time_out():   
+    while stack and not timer.time_out():       #O(n!) We expand all permutations of every node
         tour = stack.pop()
         previous = tour[-1]
 
         if len(tour) == len(edges):
-            score = score_tour(tour, edges)
+            score = score_tour(tour, edges)     #O(n) score_tour must iterate through tour
             if score < best_score:
                 best_score = score
                 best_tour = tour
@@ -198,17 +200,29 @@ def backtracking(edges: list[list[float]], timer: Timer) -> list[SolutionStats]:
                     fraction_leaves_covered=0
                 ))
 
-        for neighboring_city in range(0, len(edges)):
+        for neighboring_city in range(0, len(edges)):       #O(n) time checking neighbor nodes
 
-            if neighboring_city in tour or edges[previous][neighboring_city] == math.inf:
+            if neighboring_city in tour or edges[previous][neighboring_city] == math.inf:   #O(n) must search through tour
                 continue
 
-            new_path = tour.copy()
+            new_path = tour.copy()  
             new_path.append(neighboring_city)
-            stack.append(new_path)
+            stack.append(new_path)      
 
-    return stats
+    if stats: return stats
+    else:   return [SolutionStats(
+            [],
+            math.inf,
+            timer.time(),
+            1,
+            0,
+            0,
+            0,
+            0
+        )]
 ```
+
+backtracking() is O(n!). This because worse case scenario, we expand every SINGLE permutation of every SINGLE node. This supremely dominates all other time complexities in this function.
 
 #### Space
 
@@ -217,15 +231,15 @@ def backtracking(edges: list[list[float]], timer: Timer) -> list[SolutionStats]:
     stack = [[0]]
     stats = []
     best_score = math.inf
-    while stack and not timer.time_out():
+    while stack and not timer.time_out(): #O(n^2) As child nodes are expanded the stack at most will hold the values of the children nodes along with the nodes of the parent.
         tour = stack.pop()
         previous = tour[-1]
 
         if len(tour) == len(edges):
             score = score_tour(tour, edges)
             if score < best_score:
-                best_score = score
-                best_tour = tour
+                best_score = score      #O(1)
+                best_tour = tour          #O(1)
                 stats.append(SolutionStats(
                     tour=best_tour,
                     score = best_score ,
@@ -237,17 +251,29 @@ def backtracking(edges: list[list[float]], timer: Timer) -> list[SolutionStats]:
                     fraction_leaves_covered=0
                 ))
 
-        for neighboring_city in range(0, len(edges)):
+        for neighboring_city in range(0, len(edges)):   
 
-            if neighboring_city in tour or edges[previous][neighboring_city] == math.inf:
+            if neighboring_city in tour or edges[previous][neighboring_city] == math.inf:   
                 continue
 
-            new_path = tour.copy()
+            new_path = tour.copy()      #O(n) duplicating the tour of size n
             new_path.append(neighboring_city)
-            stack.append(new_path)
+            stack.append(new_path)      
 
-    return stats
+    if stats: return stats
+    else:   return [SolutionStats(
+            [],
+            math.inf,
+            timer.time(),
+            1,
+            0,
+            0,
+            0,
+            0
+        )]
 ```
+
+Space complexity is O(n^2) because only 2 nodes (the parent and child) will be expanded at the same time and need to be stored on the stack. This dominates all other variables and lists being stored. 
 
 ### Empirical Data - Backtracking
 
@@ -269,31 +295,32 @@ def backtracking(edges: list[list[float]], timer: Timer) -> list[SolutionStats]:
 ![img](_analysis/backtracking.svg)
 
 - Theoretical order of growth: n!
-- Empirical order of growth (if different from theoretical): We think it was the same, hence we were only able to compute a couple points. 
+- Empirical order of growth (if different from theoretical): 
+
+The Empirical data was close enough I think. Even though I was only able to compute a few plots, they seemed to match pretty closely.
 
 ### Greedy v Backtracking
 
-*Fill me in*
-
+Greedy is much faster than backtracking, but it usually doesn't actually find the optimal route. It also has the chance of not returning any paths if it hits too many dead ends. While backtracking is guaranteed to find the optimal route, it is so wildly time complex that it is unusable for graphs the second they get moderately large.
 ### Water Bottle Scenario 
 
 #### Scenario 1
 
-**Algorithm:** 
+**Algorithm: Backtracking TSP** 
 
-*Fill me in*
-
-#### Scenario 2
-
-**Algorithm:** 
-
-*Fill me in*
+It doesn't sound like this route needs to be computed quickly, nor would it take long to compute It does, however, need to be the extremely optimized. Backtracking will ensure that the route we get is the absolute best.
 
 #### Scenario 2
 
-**Algorithm:** 
+**Algorithm: Greedy TSP** 
 
-*Fill me in*
+We definitely want to use a greedy algorithm for this. The boss said he needed it very quickly and explicitly said that "costs is not so important". 
+
+#### Scenario 3
+
+**Algorithm: BSSF Backtracking** 
+
+We have no compromises for this scenario. We need the best solution and we need it relatively quickly. Backtracking TSP would take O(20!) which would probably take years to compute. Greedy won't give us the optimal path. BSSF will work well because it can prune all of the closed routes and give us an answer relatively quickly.
 
 
 ## Stretch 1
@@ -332,4 +359,21 @@ def backtracking(edges: list[list[float]], timer: Timer) -> list[SolutionStats]:
 
 ## Project Review
 
-*Fill me in*
+I did my project review with my brother Luke
+
+Our greedy scored were quire similar. Luke didn't use the score_tour function to calculate cost like I did, instead he pulled the costs from the edges parameter. We had a few inversions of conditionals, but other than that they were pretty much the same.
+
+Our backtracking functions looked a lot more different. Luke's stack contained tuples which contained the tour list, the current city, and the current. Mine only contained the tour list. Luke's code checks the tour cost at every level, whereas I check it after finding a valid solution. This means that my program probably runs a bit slower than his, as I don't stop the moment a path costs more than the cheapest solution. There weren't any other notable differences.
+
+Overall the project went well.
+
+
+
+
+
+
+
+
+
+
+
