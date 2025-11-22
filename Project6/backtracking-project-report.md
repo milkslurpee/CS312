@@ -4,7 +4,11 @@
 
 ### Design Experience
 
-*Fill me in*
+I did my design experience with Luke
+- For baseline we are going to run a for loop to loop through all the cities; These will be the starting points.
+- From each starting city, we will continuously pick the nearest city until we either find a solution, reach a dead end, or the timer runs out
+- After finding our first solution, we will kill any paths that have a greater cost than that solution. If we find a cheaper solution, then we will append that solution to the list of solutions.
+- After iterating through all the cities, we will return all of the solutions that we have found.
 
 ### Theoretical Analysis - Greedy
 

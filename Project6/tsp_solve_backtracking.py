@@ -54,7 +54,61 @@ def random_tour(edges: list[list[float]], timer: Timer) -> list[SolutionStats]:
 
 
 def greedy_tour(edges: list[list[float]], timer: Timer) -> list[SolutionStats]:
-    return []
+
+    stats = []
+    best_score = math.inf
+    for start_city in range(len(edges)):
+        tour = [start_city]
+        current_city = start_city
+
+        while True:
+            if timer.time_out():
+                return stats
+            closest_city = None
+            closest_city_cost = math.inf
+            for neighboring_city in range(len(edges[current_city])):
+                if neighboring_city in tour:
+                    continue
+                neighbor_cost = edges[current_city][neighboring_city]
+                if neighbor_cost < closest_city_cost:
+                    closest_city = neighboring_city
+                    closest_city_cost = neighbor_cost
+
+            if closest_city is None:
+                break
+
+            current_city = closest_city
+            tour.append(closest_city)
+
+            if len(tour) == len(edges):
+                score = score_tour(tour, edges)
+                if score < best_score:
+                    best_score = score
+                    stats.append(SolutionStats(
+                        tour=tour,
+                        score=best_score,
+                        time=timer.time(),
+                        max_queue_size=0,
+                        n_nodes_expanded=0,
+                        n_nodes_pruned=0,
+                        n_leaves_covered=0,
+                        fraction_leaves_covered=0
+                    ))
+                break
+
+    if not stats:
+        return [SolutionStats(
+            [],
+            math.inf,
+            timer.time(),
+            1,
+            0,
+            0,
+            0,
+            0
+        )]
+    else: return stats
+
 
 
 def backtracking(edges: list[list[float]], timer: Timer) -> list[SolutionStats]:
