@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="grinding">
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="I gave up on core poobum">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project7/branch-and-bound-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project7/branch-and-bound-project-report.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project7/test_branch_and_bound.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project7/test_branch_and_bound.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project7/tsp_solve.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project7/tsp_solve.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_branch_and_bound_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/test_branch_and_bound_results.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,14 +224,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1758733290927</updated>
-    </task>
-    <task id="LOCAL-00004" summary="test git">
-      <option name="closed" value="true" />
-      <created>1758735060603</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1758735060603</updated>
     </task>
     <task id="LOCAL-00005" summary="finished project 1 w/ report">
       <option name="closed" value="true" />
@@ -616,7 +609,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765030286335</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="I gave up on core poobum">
+      <option name="closed" value="true" />
+      <created>1765044107930</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1765044107930</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -634,7 +635,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/Project1/project-rsa" />
     </ignored-roots>
-    <MESSAGE value="empirical analysis functions" />
     <MESSAGE value="removed unnecessary directory" />
     <MESSAGE value="generated cool visual file with gpt5. Writing report" />
     <MESSAGE value="cleaning stuff" />
@@ -659,6 +659,7 @@
     <MESSAGE value="initialize project 7 (branch and bound)" />
     <MESSAGE value="finished matrix reduction function and tests" />
     <MESSAGE value="grinding" />
-    <option name="LAST_COMMIT_MESSAGE" value="grinding" />
+    <MESSAGE value="I gave up on core poobum" />
+    <option name="LAST_COMMIT_MESSAGE" value="I gave up on core poobum" />
   </component>
 </project>

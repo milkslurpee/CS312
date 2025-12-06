@@ -4,17 +4,89 @@
 
 ### Design Experience
 
-*Fill me in*
+I did my design experience with Luke my little brother
+
+For the matrix reduction we need to start by:
+- iterating through each node (row reduction)
+- for each node, find the minimum cost edge and subtract it from the other edge values
+- Add all the minimum costs together as the initial cost
+- Do this^ all again but column-wise, continuously adding them to the initial cost
+- Return the reduced matrix, and the initial cost
 
 ### Theoretical Analysis - Reduced Cost Matrix
 
 #### Time 
 
-*Fill me in*
+```pycon
+def reduce_matrix(edges: list[list[float]]):                #O(n^2 + 2n(2n)) -> O(n^2)
+
+    reduced_matrix = [row[:] for row in edges]              #O(n^2) make a copy of the matrix which is n by n
+    reduced_cost = 0
+    for edge in range(len(reduced_matrix)):                 #O(n) iterate through all nodes, not "edges". I coded this late last night and it made sense at the time lol. 
+        min_cost = math.inf
+        for cost in range(len(reduced_matrix)):                 #O(n) iterate through all edges, finding minimum cost
+            min_cost = min(reduced_matrix[edge][cost], min_cost)
+
+        if min_cost != math.inf and min_cost > 0:
+            reduced_cost += min_cost
+            for cost in range(len(reduced_matrix)):             #O(n) iterate again to update distances
+                if reduced_matrix[edge][cost] != math.inf:
+                    reduced_matrix[edge][cost] -= min_cost
+
+    for cost in range(len(reduced_matrix)):                 #O(n) iterating through nodes column-wise. Again, sorry my names don't make sense. I was really tired.
+        min_cost = math.inf
+        for edge in range(len(reduced_matrix)):                 #O(n) iterate through edges
+            min_cost = min(reduced_matrix[edge][cost], min_cost)
+
+        if min_cost != math.inf and min_cost > 0:
+            reduced_cost += min_cost
+            for edge in range(len(reduced_matrix)):             
+                if reduced_matrix[edge][cost] != math.inf:
+                    reduced_matrix[edge][cost] -= min_cost
+
+    return reduced_matrix, reduced_cost
+
+
+```
+
+The Time Complexity is O(n^2 + 2n(2n)) or just **O(n^2)**. This because for both the row reduction and column reduction we first iterate through all the nodes, and then we iterate through all the edges to find the minimum value. We iterate again to update the matrix values, but we are ultimately dominated by O(n^2).
+
 
 #### Space
 
-*Fill me in*
+```pycon
+def reduce_matrix(edges: list[list[float]]):
+
+    reduced_matrix = [row[:] for row in edges]          #O(n^2) creating copy of original n by n matrix. 
+    reduced_cost = 0                                    #O(1)
+    for edge in range(len(reduced_matrix)):
+        min_cost = math.inf                             #O(1)
+        for cost in range(len(reduced_matrix)):
+            min_cost = min(reduced_matrix[edge][cost], min_cost)       
+
+        if min_cost != math.inf and min_cost > 0:
+            reduced_cost += min_cost
+            for cost in range(len(reduced_matrix)):
+                if reduced_matrix[edge][cost] != math.inf:
+                    reduced_matrix[edge][cost] -= min_cost
+
+    for cost in range(len(reduced_matrix)):
+        min_cost = math.inf                         #O(1)
+        for edge in range(len(reduced_matrix)):
+            min_cost = min(reduced_matrix[edge][cost], min_cost)
+
+        if min_cost != math.inf and min_cost > 0:
+            reduced_cost += min_cost
+            for edge in range(len(reduced_matrix)):
+                if reduced_matrix[edge][cost] != math.inf:
+                    reduced_matrix[edge][cost] -= min_cost
+
+    return reduced_matrix, reduced_cost
+
+
+```
+
+The space complexity is **O(n^2)** solely due to the fact that we made a copy of the n by n matrix. I probably could have made a version that mutates the orignal matrix, but I assumed that could cause problems for core (which I couldn't finish in time).
 
 ## Core
 
@@ -80,5 +152,6 @@
 
 ## Project Report 
 
-*Fill me in*
+I spent about 5 hours on core, and just got really stuck. I'm not super happy I couldn't get it done, considering Baseline was actually super easy and only took me a couple hours.
+Other than that the project went fine lol. I did my project report with Luke my little brother.
 
