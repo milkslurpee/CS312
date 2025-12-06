@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="working on report">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project6/_analysis/backtracking.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/_analysis/backtracking.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project6/analyze_backtracking.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/analyze_backtracking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project6/backtracking-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/backtracking-project-report.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project6/compute_coefficient.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/compute_coefficient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project6/plot_empirical_theoretical_compared.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/plot_empirical_theoretical_compared.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project6/test_backtracking_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/test_backtracking_results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project6/tsp_solve_backtracking.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/tsp_solve_backtracking.py" afterDir="false" />
-    </list>
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="finished Project 6 finally (kill me)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,64 +39,64 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python tests.Python tests for ConvexHull.test_convex_hull.test_uniform_distribution_small.executor": "Run",
-    "Python tests.Python tests for Project3.test_dijkstras.test_tiny_network_linear_pq.executor": "Run",
-    "Python tests.Python tests for Project3.test_dijkstras.test_very_large_network_linear_pq.executor": "Run",
-    "Python tests.Python tests for Project5.test_alignment.test_large_dna_alignment.executor": "Run",
-    "Python tests.Python tests for Project5.test_alignment.test_small_alignment.executor": "Run",
-    "Python tests.Python tests for test_rsa.test_composites_miller_rabin.executor": "Run",
-    "Python tests.Python tests for test_rsa.test_primes_fermat.executor": "Run",
-    "Python tests.Python tests for test_scc.test_prepost.executor": "Run",
-    "Python tests.Python tests for test_scc.test_scc_2.executor": "Run",
-    "Python tests.Python tests in ConvexHull.executor": "Run",
-    "Python tests.Python tests in Project4.executor": "Run",
-    "Python tests.Python tests in project-scc.executor": "Run",
-    "Python tests.Python tests in test_alignment.py.executor": "Run",
-    "Python tests.Python tests in test_backtracking.py.executor": "Run",
-    "Python tests.Python tests in test_convex_hull.py (1).executor": "Run",
-    "Python tests.Python tests in test_convex_hull.py.executor": "Run",
-    "Python tests.Python tests in test_dijkstras.py.executor": "Run",
-    "Python tests.Python tests in test_rsa.py.executor": "Run",
-    "Python tests.Python tests in test_scc.py.executor": "Run",
-    "Python.EnDecrypt.executor": "Run",
-    "Python.alignment.executor": "Run",
-    "Python.analyze_alignment_runtimes.executor": "Run",
-    "Python.analyze_backtracking.executor": "Run",
-    "Python.analyze_backtracking_runtimes.executor": "Run",
-    "Python.analyze_convex_hull.executor": "Run",
-    "Python.benchmark.executor": "Run",
-    "Python.benchmark2.executor": "Run",
-    "Python.compute_coefficient.executor": "Run",
-    "Python.cuttree.executor": "Run",
-    "Python.encrypt_decrypt_files.executor": "Run",
-    "Python.encryptspeed.executor": "Run",
-    "Python.main (1).executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.network_routing.executor": "Run",
-    "Python.plot_empirical_theoretical_compared (1).executor": "Run",
-    "Python.plot_empirical_theoretical_compared.executor": "Run",
-    "Python.plotting.executor": "Run",
-    "Python.run_dijkstra_analysis.executor": "Run",
-    "Python.run_scc_analysis.executor": "Run",
-    "Python.test_convex_hull.executor": "Run",
-    "Python.test_rsa.executor": "Run",
-    "Python.test_scc.executor": "Run",
-    "Python.this_is_cool.executor": "Run",
-    "Python.tsp_full_details.executor": "Run",
-    "Python.tsp_plot.executor": "Run",
-    "Python.tsp_run.executor": "Run",
-    "Python.tsp_solve_backtracking.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Stuff/Homework/Fall2025/CS312/Project6",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for ConvexHull.test_convex_hull.test_uniform_distribution_small.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Project3.test_dijkstras.test_tiny_network_linear_pq.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Project3.test_dijkstras.test_very_large_network_linear_pq.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Project5.test_alignment.test_large_dna_alignment.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Project5.test_alignment.test_small_alignment.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_rsa.test_composites_miller_rabin.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_rsa.test_primes_fermat.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_scc.test_prepost.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_scc.test_scc_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in ConvexHull.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in Project4.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in project-scc.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_alignment.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_backtracking.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_convex_hull.py (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_convex_hull.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_dijkstras.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_rsa.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_scc.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.EnDecrypt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.alignment.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analyze_alignment_runtimes.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analyze_backtracking.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analyze_backtracking_runtimes.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analyze_convex_hull.executor&quot;: &quot;Run&quot;,
+    &quot;Python.benchmark.executor&quot;: &quot;Run&quot;,
+    &quot;Python.benchmark2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.compute_coefficient.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cuttree.executor&quot;: &quot;Run&quot;,
+    &quot;Python.encrypt_decrypt_files.executor&quot;: &quot;Run&quot;,
+    &quot;Python.encryptspeed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.network_routing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_empirical_theoretical_compared (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_empirical_theoretical_compared.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plotting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_dijkstra_analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_scc_analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_convex_hull.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_rsa.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_scc.executor&quot;: &quot;Run&quot;,
+    &quot;Python.this_is_cool.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tsp_full_details.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tsp_plot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tsp_run.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tsp_solve_backtracking.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Stuff/Homework/Fall2025/CS312/Project6&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project6" />
@@ -616,7 +607,23 @@
       <option name="project" value="LOCAL" />
       <updated>1763829419505</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="finished Project 6 finally (kill me)">
+      <option name="closed" value="true" />
+      <created>1763837514379</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1763837514379</updated>
+    </task>
+    <task id="LOCAL-00048" summary="finished Project 6 finally (kill me)">
+      <option name="closed" value="true" />
+      <created>1763837579259</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1763837579259</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -634,7 +641,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/Project1/project-rsa" />
     </ignored-roots>
-    <MESSAGE value="resubmission" />
     <MESSAGE value="Project 3 init" />
     <MESSAGE value="Baseline + Core(but using built in PQ)" />
     <MESSAGE value="hello there stranger" />
@@ -659,6 +665,7 @@
     <MESSAGE value="finished baseline" />
     <MESSAGE value="finished core" />
     <MESSAGE value="working on report" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on report" />
+    <MESSAGE value="finished Project 6 finally (kill me)" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished Project 6 finally (kill me)" />
   </component>
 </project>
