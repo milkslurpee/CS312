@@ -1,6 +1,7 @@
 import math
 import random
-
+import heapq
+from Project7.reduce_cost import reduced_matrix
 from tsp_core import Tour, SolutionStats, Timer, score_tour, Solver
 from tsp_cuttree import CutTree
 
@@ -165,6 +166,34 @@ def dfs(edges: list[list[float]], timer: Timer) -> list[SolutionStats]:
 
 def branch_and_bound(edges: list[list[float]], timer: Timer) -> list[SolutionStats]:
 
+    starting_matrix, lower_bound = reduce_matrix(edges)
+    upper_bound = math.inf
+
+    root = Node(
+        matrix = starting_matrix,
+        bound = lower_bound,
+        included_edges = set(),      # No edges forced yet
+        excluded_edges = set(),      # No edges excluded yet
+        parent = None                # No parent (root node)
+    )
+
+    pq = []
+    heapq.heappush(pq, root)
+
+    while pq and not timer.time_out():
+        current_node = heapq.heappop(pq)
+        if current_node.bound >= upper_bound:
+            continue
+        if len(current_node.included_edges) == len(edges):
+            tour
+
+
+
+
+
+
+
+
 
 
 
@@ -172,32 +201,45 @@ def branch_and_bound(edges: list[list[float]], timer: Timer) -> list[SolutionSta
     return []
 
 
+class Node:
+    def __init__(self, matrix, bound, included_edges=None, excluded_edges=None, parent=None):
+        self.matrix = [row[:] for row in matrix]  # Copy the cost matrix
+        self.bound = bound  # Current lower bound
+        self.included_edges = included_edges or set()  # Edges forced to be in tour
+        self.excluded_edges = excluded_edges or set()  # Edges forced to be out
+        self.parent = parent  # Optional: for reconstructing solution
+
+    # For priority queue comparison
+    def __lt__(self, other):
+        return self.bound < other.bound
+
 def reduce_matrix(edges: list[list[float]]):
 
+    reduced_matrix = [row[:] for row in edges]
     reduced_cost = 0
-    for edge in range(len(edges)):
+    for edge in range(len(reduced_matrix)):
         min_cost = math.inf
-        for cost in range(len(edges)):
-            min_cost = min(edges[edge][cost], min_cost)
+        for cost in range(len(reduced_matrix)):
+            min_cost = min(reduced_matrix[edge][cost], min_cost)
 
         if min_cost != math.inf and min_cost > 0:
             reduced_cost += min_cost
-            for cost in range(len(edges)):
-                if edges[edge][cost] != math.inf:
-                    edges[edge][cost] -= min_cost
+            for cost in range(len(reduced_matrix)):
+                if reduced_matrix[edge][cost] != math.inf:
+                    reduced_matrix[edge][cost] -= min_cost
 
-    for cost in range(len(edges)):
+    for cost in range(len(reduced_matrix)):
         min_cost = math.inf
-        for edge in range(len(edges)):
-            min_cost = min(edges[edge][cost], min_cost)
+        for edge in range(len(reduced_matrix)):
+            min_cost = min(reduced_matrix[edge][cost], min_cost)
 
         if min_cost != math.inf and min_cost > 0:
             reduced_cost += min_cost
-            for edge in range(len(edges)):
-                if edges[edge][cost] != math.inf:
-                    edges[edge][cost] -= min_cost
+            for edge in range(len(reduced_matrix)):
+                if reduced_matrix[edge][cost] != math.inf:
+                    reduced_matrix[edge][cost] -= min_cost
 
-    return edges, reduced_cost
+    return reduced_matrix, reduced_cost
 
 
 

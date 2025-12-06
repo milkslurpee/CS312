@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="initialize project 7 (branch and bound)">
-      <change afterPath="$PROJECT_DIR$/Project7/reduce_cost.py" afterDir="false" />
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="finished matrix reduction function and tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project6/test_backtracking_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/test_backtracking_results.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project7/test_reduce_cost_matrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project7/test_reduce_cost_matrix.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project7/test_reduce_cost_matrix_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project7/test_reduce_cost_matrix_results.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project7/tsp_solve.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project7/tsp_solve.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,6 +68,7 @@
     "Python tests.Python tests in test_convex_hull.py (1).executor": "Run",
     "Python tests.Python tests in test_convex_hull.py.executor": "Run",
     "Python tests.Python tests in test_dijkstras.py.executor": "Run",
+    "Python tests.Python tests in test_reduce_cost_matrix.py.executor": "Run",
     "Python tests.Python tests in test_rsa.py.executor": "Run",
     "Python tests.Python tests in test_scc.py.executor": "Run",
     "Python.EnDecrypt.executor": "Run",
@@ -228,22 +228,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1758733290927</updated>
-    </task>
-    <task id="LOCAL-00001" summary="project 1">
-      <option name="closed" value="true" />
-      <created>1758734008054</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1758734008054</updated>
-    </task>
-    <task id="LOCAL-00002" summary="project 1">
-      <option name="closed" value="true" />
-      <created>1758734410004</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1758734410004</updated>
     </task>
     <task id="LOCAL-00003" summary="project 1">
       <option name="closed" value="true" />
@@ -621,7 +605,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765014051942</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="finished matrix reduction function and tests">
+      <option name="closed" value="true" />
+      <created>1765024191428</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1765024191428</updated>
+    </task>
+    <task id="LOCAL-00051" summary="finished matrix reduction function and tests">
+      <option name="closed" value="true" />
+      <created>1765024197886</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1765024197887</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -639,7 +639,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/Project1/project-rsa" />
     </ignored-roots>
-    <MESSAGE value="Baseline + Core(but using built in PQ)" />
     <MESSAGE value="hello there stranger" />
     <MESSAGE value="empirical analysis functions" />
     <MESSAGE value="removed unnecessary directory" />
@@ -664,6 +663,7 @@
     <MESSAGE value="working on report" />
     <MESSAGE value="finished Project 6 finally (kill me)" />
     <MESSAGE value="initialize project 7 (branch and bound)" />
-    <option name="LAST_COMMIT_MESSAGE" value="initialize project 7 (branch and bound)" />
+    <MESSAGE value="finished matrix reduction function and tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished matrix reduction function and tests" />
   </component>
 </project>

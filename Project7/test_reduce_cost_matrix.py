@@ -28,7 +28,7 @@ def test_reduced_cost_matrix_1():
 
 def test_reduced_cost_matrix_2():
 
-    test_matrix = [                 # made it up and reduced by hand
+    test_matrix = [                 # made it up, reduced by hand, and checked answer with a few chatbots
         [math.inf, 20, 30, 10],
         [15, math.inf, 60, 20],
         [25, 30, math.inf, 30],
