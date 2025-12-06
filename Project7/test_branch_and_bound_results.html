@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Report</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            flex-direction: column;
+            font-family: monospace, sans-serif;
+            line-height: 1.4;
+            background-color: #f9f9f9;
+            color: rgb(0, 46, 93);
+        }
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        header, footer {
+            background-color: rgb(0, 46, 93);
+            color: white;
+            text-align: center;
+        }
+        header h1, footer p {
+            margin: 0;
+            padding: 5px 0;
+        }
+        header {
+            margin-bottom: 10px;
+        }
+        footer {
+            margin-top: 10px;
+        }
+        h2 {
+            padding: 5px 0;
+        }
+        .test-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 50px;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        .test-result-passed, .test-result-failed {
+            padding: 5px;
+            border-radius: 5px;
+            margin: 10px 50px;
+            position: relative;
+        }
+        .test-result-passed {
+            background-color: #d4edda;
+            border: 2px solid #c3e6cb;
+        }
+        .test-result-failed {
+            background-color: #f8d7da;
+            border: 2px solid #f5c6cb;
+        }
+        .result-header {
+            text-align: center;
+        }
+        .result-header h2 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .result-subheader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5px;
+            font-size: 1em;
+            padding: 0 10px;
+        }
+        .result-subheader .status, .result-subheader .score {
+            font-size: 1em;
+        }
+        .result-subheader .status h2, .result-subheader .score h2 {
+            display: inline;
+            font-size: 1em;
+            margin-right: 5px;
+        }
+        ul.test-info {
+            list-style-type: none;
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        ul.test-info li {
+            margin: 6px 0;
+        }
+        ul.test-info li.fail {
+            color: #721c24;
+        }
+        ul.test-info li.pass {
+            color: #155724;
+        }
+        .blocked-message {
+            margin: 10px 20px;
+            padding: 10px;
+            font-style: italic;
+            color: #555;
+        }
+        pre.failure-output {
+            background: #fff0f0;
+            border: 1px solid #f5c6cb;
+            padding: 8px;
+            border-radius: 3px;
+            margin-top: 5px;
+            white-space: pre-wrap;
+        }
+        .comparison-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+            margin: 10px 0;
+            padding: 0 10px;
+        }
+        .section {
+            flex: 1;
+            min-width: 300px;
+        }
+        .content {
+            background: rgb(245, 245, 245);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <h1>test_branch_and_bound Results</h1>
+        </header>
+        <main class="main-content">
+            <div class="test-summary">
+                <span>Passed: 0 / 1</span>
+                <span>Total Score: 0 / 0</span>
+            </div>
+            
+            
+            <div class="test-result-failed">
+                <div class="content-wrapper">
+                    <div class="result-header">
+                        <h2>stretch2</h2>
+                        <div class="result-subheader">
+                            <div class="status">
+                                <h2>Failed</h2>
+                            </div>
+                            <div class="score">
+                                <h2>Score:</h2> 0 / 0
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <ul class="test-info">
+                    
+                        
+                            <li class="fail">test_branch_and_bound_smart — Fail</li>
+                            
+                                <pre class="failure-output">@stretch2
+    def test_branch_and_bound_smart():
+        """
+        Your Smart B&B algorithm should find a better answer
+        than your B&B algorithm in the same amount of time.
+        """
+        timeout = PARAMS_FOR_SMART_BRANCH_AND_BOUND_SMART_TEST.pop('timeout')
+        locations, edges = generate_network(
+            **PARAMS_FOR_SMART_BRANCH_AND_BOUND_SMART_TEST
+        )
+    
+        timer = Timer(timeout)
+>       bnb_stats = branch_and_bound(deepcopy(edges), timer)
+
+Project7\test_branch_and_bound.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+edges = [[0.0, 0.8, 0.564, 0.219, 0.318, 0.595, ...], [0.8, 0.0, 0.94, 0.717, 1.08, 0.3, ...], [0.564, inf, 0.0, 0.377, inf, i...377, 0.0, inf, 0.456, ...], [0.318, inf, 0.497, 0.374, 0.0, 0.83, ...], [0.595, 0.3, 0.64, 0.456, 0.83, 0.0, ...], ...]
+timer = <tsp_core.Timer object at 0x000002471E42F8C0>
+
+    def branch_and_bound(edges: list[list[float]], timer: Timer) -> list[SolutionStats]:
+        import heapq
+        import math
+    
+        # Helper function to calculate tour cost
+        def calculate_tour_cost(tour, cost_matrix):
+            total = 0
+            n = len(tour)
+            for i in range(n):
+                j = (i + 1) % n
+                total += cost_matrix[tour[i]][tour[j]]
+            return total
+    
+        # Initialize
+        starting_matrix, lower_bound = reduce_matrix([row[:] for row in edges])
+        upper_bound = math.inf
+        best_tour = []
+        results = []
+    
+        # Create root node
+        root = Node(
+            matrix=starting_matrix,
+            bound=lower_bound,
+            included_set=set(),
+            included_list=[],
+            excluded_edges=set(),
+            parent=None
+        )
+    
+        # Initialize priority queue
+        pq = []
+        heapq.heappush(pq, root)
+    
+        # Statistics tracking
+        total_nodes_expanded = 1  # Root node
+        total_nodes_pruned = 0
+        max_queue_size = 1
+    
+        # Main loop
+        while pq and not timer.time_out():
+            # Update max queue size
+            max_queue_size = max(max_queue_size, len(pq))
+    
+            # Get node with smallest lower bound
+            current_node = heapq.heappop(pq)
+    
+            # Prune if bound is worse than best solution
+            if current_node.bound >= upper_bound:
+                total_nodes_pruned += 1
+                continue
+    
+            # Check if complete tour
+            if len(current_node.included_set) == len(edges):
+                tour = reconstruct_tour(current_node.included_list, len(edges))
+                if tour is not None:
+                    tour_cost = calculate_tour_cost(tour, edges)
+                    if tour_cost < upper_bound:
+                        upper_bound = tour_cost
+                        best_tour = tour
+    
+                        stats = SolutionStats(
+                            tour=best_tour.copy(),
+                            score=upper_bound,
+                            time=timer.time(),
+                            max_queue_size=max_queue_size,
+                            n_nodes_expanded=total_nodes_expanded,
+                            n_nodes_pruned=total_nodes_pruned,
+                            n_leaves_covered=len(current_node.included_set),
+                            fraction_leaves_covered=len(current_node.included_set) / max(1, len(edges) - 1),
+                        )
+                        results.append(stats)
+                continue
+    
+            # Find edge to branch on (first zero found)
+            n = len(current_node.matrix)
+            edge_to_branch = None
+    
+            for i in range(n):
+                for j in range(n):
+                    if (current_node.matrix[i][j] == 0 and
+                            (i, j) not in current_node.included_set and
+                            (i, j) not in current_node.excluded_edges):
+                        edge_to_branch = (i, j)
+                        break
+                if edge_to_branch:
+                    break
+    
+            if edge_to_branch is None:
+                continue  # No edge to branch on
+    
+            i, j = edge_to_branch
+    
+            # === INCLUDE CHILD ===
+            include_matrix = [row[:] for row in current_node.matrix]
+    
+            # Set row i and column j to infinity
+            for k in range(n):
+                include_matrix[i][k] = math.inf
+                include_matrix[k][j] = math.inf
+    
+            # Prevent subtour: set reverse edge to infinity
+            include_matrix[j][i] = math.inf
+    
+            # Create new included sets
+            new_included_set = current_node.included_set.copy()
+            new_included_set.add((i, j))
+            new_included_list = current_node.included_list.copy()
+            new_included_list.append((i, j))
+    
+            # Reduce matrix and calculate bound
+            reduced_include, include_cost = reduce_matrix(include_matrix)
+            include_bound = current_node.bound + include_cost
+    
+            include_node = Node(
+                matrix=reduced_include,
+                bound=include_bound,
+                included_set=new_included_set,
+                included_list=new_included_list,
+                excluded_edges=current_node.excluded_edges.copy(),
+                parent=current_node
+            )
+            heapq.heappush(pq, include_node)
+    
+            # === EXCLUDE CHILD ===
+            exclude_matrix = [row[:] for row in current_node.matrix]
+            exclude_matrix[i][j] = math.inf
+    
+            # Create new excluded set
+            new_excluded = current_node.excluded_edges.copy()
+            new_excluded.add((i, j))
+    
+            # Reduce matrix and calculate bound
+            reduced_exclude, exclude_cost = reduce_matrix(exclude_matrix)
+            exclude_bound = current_node.bound + exclude_cost
+    
+            exclude_node = Node(
+                matrix=reduced_exclude,
+                bound=exclude_bound,
+                included_set=current_node.included_set.copy(),
+                included_list=current_node.included_list.copy(),
+                excluded_edges=new_excluded,
+                parent=current_node
+            )
+>           heapq.heappush(pq, exclude_node)
+E           TypeError: '<' not supported between instances of 'Node' and 'Node'
+
+Project7\tsp_solve.py:310: TypeError</pre>
+                            
+                        
+                    
+                    </ul>
+                    
+                </div>
+            </div>
+            
+            
+        </main>
+        <footer>
+            <p>Generated by byu_pytest_utils on December 06, 2025 10:48 AM</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -8,13 +8,65 @@ from tsp_test_utils import assert_valid_tours
 
 
 from copy import deepcopy
-
+import math
 # -------------------------------- Test tiers -------------------------------- #
 core = tier('core', 0)
 stretch2 = tier('stretch2', 1)
 
 # -------------------------------- Core tests -------------------------------- #
 # TODO - do we need a better core test, or is this a good assessment of whether they did B&B correctly?
+
+def test_branch_and_bound():
+    """
+    Test the branch_and_bound function.
+
+    - Ensure that the algorithm runs correctly, terminates within time limit, and returns the best tour.
+    - Verify that the solution found is valid and has the correct score.
+    """
+
+    # Test data: a simple 4-city TSP problem with known distances
+    edges = [
+        [math.inf, 10, 15, 20],
+        [10, math.inf, 35, 25],
+        [15, 35, math.inf, 30],
+        [20, 25, 30, math.inf]
+    ]
+
+    # Initialize a Timer with a 10-second time limit
+    timer = Timer(time_limit=10)
+
+    # Run Branch and Bound algorithm
+    stats = branch_and_bound(edges, timer)
+
+    # Ensure the algorithm did not time out
+    assert not timer.time_out(), "The algorithm timed out!"
+
+    # Ensure the returned solution is valid (i.e., the tour should visit all cities once)
+    tour = stats[0].tour
+    assert len(tour) == len(edges), "The tour length is incorrect!"
+
+    # Ensure the tour is valid (no repeated cities)
+    assert len(set(tour)) == len(tour), "The tour contains repeated cities!"
+
+    # Calculate the score of the returned tour and compare with the expected score
+    calculated_score = score_tour(tour, edges)
+    expected_score = 80  # This should be the known optimal solution for this small problem
+
+    # Check if the calculated score is equal to the expected score
+    assert calculated_score == expected_score, f"Expected score: {expected_score}, but got: {calculated_score}"
+
+    # Check that the solution statistics are correct
+    assert stats[0].n_nodes_expanded > 0, "No nodes were expanded!"
+    assert stats[0].n_nodes_pruned >= 0, "Negative nodes pruned!"
+    assert stats[0].score == expected_score, f"Expected score: {expected_score}, but got: {stats[0].score}"
+
+    print("Branch and Bound test passed!")
+
+
+# Call the test
+test_branch_and_bound()
+
+
 # @core
 # def test_branch_and_bound():
 #     """

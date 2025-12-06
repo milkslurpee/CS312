@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="finished matrix reduction function and tests">
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="grinding">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project7/test_reduce_cost_matrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project7/test_reduce_cost_matrix.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project7/test_reduce_cost_matrix_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project7/test_reduce_cost_matrix_results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project7/test_branch_and_bound.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project7/test_branch_and_bound.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project7/tsp_solve.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project7/tsp_solve.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +51,8 @@
     "Python tests.Python tests for Project3.test_dijkstras.test_very_large_network_linear_pq.executor": "Run",
     "Python tests.Python tests for Project5.test_alignment.test_large_dna_alignment.executor": "Run",
     "Python tests.Python tests for Project5.test_alignment.test_small_alignment.executor": "Run",
+    "Python tests.Python tests for Project7.test_branch_and_bound.test_branch_and_bound.executor": "Run",
+    "Python tests.Python tests for Project7.test_branch_and_bound.test_branch_and_bound_smart.executor": "Run",
     "Python tests.Python tests for Project7.test_reduce_cost_matrix.test_reduced_cost_matrix_1.executor": "Run",
     "Python tests.Python tests for Project7.test_reduce_cost_matrix.test_reduced_cost_matrix_2.executor": "Run",
     "Python tests.Python tests for Project7.test_reduce_cost_matrix.test_reduced_cost_matrix_YUGE.executor": "Run",
@@ -65,6 +66,7 @@
     "Python tests.Python tests in project-scc.executor": "Run",
     "Python tests.Python tests in test_alignment.py.executor": "Run",
     "Python tests.Python tests in test_backtracking.py.executor": "Run",
+    "Python tests.Python tests in test_branch_and_bound.py.executor": "Run",
     "Python tests.Python tests in test_convex_hull.py (1).executor": "Run",
     "Python tests.Python tests in test_convex_hull.py.executor": "Run",
     "Python tests.Python tests in test_dijkstras.py.executor": "Run",
@@ -121,27 +123,35 @@
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_reduce_cost_matrix.py">
-    <configuration name="reduce_cost" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for Project7.test_branch_and_bound.test_branch_and_bound">
+    <configuration name="Python tests for Project7.test_branch_and_bound.test_branch_and_bound" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project7/reduce_cost.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Project7.test_branch_and_bound.test_branch_and_bound&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for Project7.test_branch_and_bound.test_branch_and_bound_smart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="CS312" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Project7.test_branch_and_bound.test_branch_and_bound_smart&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests for Project7.test_reduce_cost_matrix.test_reduced_cost_matrix_2" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -159,7 +169,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for Project7.test_reduce_cost_matrix.test_reduced_cost_matrix_YUGE" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_branch_and_bound.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,23 +180,8 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Project7.test_reduce_cost_matrix.test_reduced_cost_matrix_YUGE&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for Project7.test_reduce_cost_matrix.test_reduced_cost_matrix_smol" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="CS312" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Project7.test_reduce_cost_matrix.test_reduced_cost_matrix_smol&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Project7/test_branch_and_bound.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in test_reduce_cost_matrix.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -206,11 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for Project7.test_branch_and_bound.test_branch_and_bound" />
+        <item itemvalue="Python tests.Python tests in test_branch_and_bound.py" />
+        <item itemvalue="Python tests.Python tests for Project7.test_branch_and_bound.test_branch_and_bound_smart" />
         <item itemvalue="Python tests.Python tests in test_reduce_cost_matrix.py" />
         <item itemvalue="Python tests.Python tests for Project7.test_reduce_cost_matrix.test_reduced_cost_matrix_2" />
-        <item itemvalue="Python.reduce_cost" />
-        <item itemvalue="Python tests.Python tests for Project7.test_reduce_cost_matrix.test_reduced_cost_matrix_YUGE" />
-        <item itemvalue="Python tests.Python tests for Project7.test_reduce_cost_matrix.test_reduced_cost_matrix_smol" />
       </list>
     </recent_temporary>
   </component>
@@ -228,14 +223,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1758733290927</updated>
-    </task>
-    <task id="LOCAL-00003" summary="project 1">
-      <option name="closed" value="true" />
-      <created>1758734481536</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1758734481536</updated>
     </task>
     <task id="LOCAL-00004" summary="test git">
       <option name="closed" value="true" />
@@ -621,7 +608,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765024197887</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="grinding">
+      <option name="closed" value="true" />
+      <created>1765030286335</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1765030286335</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -639,7 +634,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/Project1/project-rsa" />
     </ignored-roots>
-    <MESSAGE value="hello there stranger" />
     <MESSAGE value="empirical analysis functions" />
     <MESSAGE value="removed unnecessary directory" />
     <MESSAGE value="generated cool visual file with gpt5. Writing report" />
@@ -664,6 +658,7 @@
     <MESSAGE value="finished Project 6 finally (kill me)" />
     <MESSAGE value="initialize project 7 (branch and bound)" />
     <MESSAGE value="finished matrix reduction function and tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished matrix reduction function and tests" />
+    <MESSAGE value="grinding" />
+    <option name="LAST_COMMIT_MESSAGE" value="grinding" />
   </component>
 </project>
