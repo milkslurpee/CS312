@@ -49,7 +49,7 @@ def reduce_matrix(edges: list[list[float]]):                #O(n^2 + 2n(2n)) -> 
 
 ```
 
-The Time Complexity is O(n^2 + 2n(2n)) or just **O(n^2)**. This because for both the row reduction and column reduction we first iterate through all the nodes, and then we iterate through all the edges to find the minimum value. We iterate again to update the matrix values, but we are ultimately dominated by O(n^2).
+The Time Complexity is O(n^2 + 2n(2n)) or just **O(n^2)**. This is because for both the row reduction and column reduction we first iterate through all the nodes, and then we iterate through all the edges to find the minimum value. We then iterate through again to update the matrix values with the reduced values. Ultimately though, everything is just dominated by O(n^2).
 
 
 #### Space
@@ -154,4 +154,6 @@ The space complexity is **O(n^2)** solely due to the fact that we made a copy of
 
 I spent about 5 hours on core, and just got really stuck. I'm not super happy I couldn't get it done, considering Baseline was actually super easy and only took me a couple hours.
 Other than that the project went fine lol. I did my project report with Luke my little brother.
+
+Luke and I largely coded the reduce_matrix function the same. We did have some differences. Most were trivial, like different methods of copying the matrix, and finding minimum cost edges. The only difference that may be nontrivial is that I skipped infinite values when updating the matrix rows and columns, and Luke didn't. This doesn't change anything since infinity - anything is still infinity, but mine may run a bit faster since I'm skipping some computations.
 
