@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="I gave up on core, poobum">
+    <list default="true" id="c66c4530-8398-4901-ad73-d72003a0c04e" name="Changes" comment="final changes to report">
+      <change afterPath="$PROJECT_DIR$/Project8/problem1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project8/problem2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project7/branch-and-bound-project-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project7/branch-and-bound-project-report.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project7/test_reduce_cost_matrix_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project7/test_reduce_cost_matrix_results.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +96,7 @@
     &quot;Python.run_dijkstra_analysis.executor&quot;: &quot;Run&quot;,
     &quot;Python.run_scc_analysis.executor&quot;: &quot;Run&quot;,
     &quot;Python.test_convex_hull.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_reduce_cost_matrix.executor&quot;: &quot;Run&quot;,
     &quot;Python.test_rsa.executor&quot;: &quot;Run&quot;,
     &quot;Python.test_scc.executor&quot;: &quot;Run&quot;,
     &quot;Python.this_is_cool.executor&quot;: &quot;Run&quot;,
@@ -122,7 +125,29 @@
       <recent name="C:\Stuff\Homework\Fall2025\CS312\Project2\project-scc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for Project7.test_branch_and_bound.test_branch_and_bound">
+  <component name="RunManager" selected="Python tests.Python tests in test_reduce_cost_matrix.py">
+    <configuration name="test_reduce_cost_matrix" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS312" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project7" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project7/test_reduce_cost_matrix.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for Project7.test_branch_and_bound.test_branch_and_bound" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="CS312" />
       <option name="ENV_FILES" value="" />
@@ -150,21 +175,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;Project7.test_branch_and_bound.test_branch_and_bound_smart&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for Project7.test_reduce_cost_matrix.test_reduced_cost_matrix_2" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="CS312" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Project7.test_reduce_cost_matrix.test_reduced_cost_matrix_2&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -200,11 +210,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_reduce_cost_matrix.py" />
+        <item itemvalue="Python.test_reduce_cost_matrix" />
         <item itemvalue="Python tests.Python tests for Project7.test_branch_and_bound.test_branch_and_bound" />
         <item itemvalue="Python tests.Python tests in test_branch_and_bound.py" />
         <item itemvalue="Python tests.Python tests for Project7.test_branch_and_bound.test_branch_and_bound_smart" />
-        <item itemvalue="Python tests.Python tests in test_reduce_cost_matrix.py" />
-        <item itemvalue="Python tests.Python tests for Project7.test_reduce_cost_matrix.test_reduced_cost_matrix_2" />
       </list>
     </recent_temporary>
   </component>
@@ -222,14 +232,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1758733290927</updated>
-    </task>
-    <task id="LOCAL-00006" summary="finished project 1 w/ report">
-      <option name="closed" value="true" />
-      <created>1758779827859</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1758779827859</updated>
     </task>
     <task id="LOCAL-00007" summary="added project 2 (scc) to repository">
       <option name="closed" value="true" />
@@ -615,7 +617,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765046365731</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="final changes to report">
+      <option name="closed" value="true" />
+      <created>1765108530449</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1765108530449</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -633,7 +643,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/Project1/project-rsa" />
     </ignored-roots>
-    <MESSAGE value="generated cool visual file with gpt5. Writing report" />
     <MESSAGE value="cleaning stuff" />
     <MESSAGE value="removing redundant code" />
     <MESSAGE value="more work on report + empirical graphs" />
@@ -658,6 +667,7 @@
     <MESSAGE value="grinding" />
     <MESSAGE value="I gave up on core poobum" />
     <MESSAGE value="I gave up on core, poobum" />
-    <option name="LAST_COMMIT_MESSAGE" value="I gave up on core, poobum" />
+    <MESSAGE value="final changes to report" />
+    <option name="LAST_COMMIT_MESSAGE" value="final changes to report" />
   </component>
 </project>
